@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: $helvetica-neue;
+    font-weight: 300;
+    position: relative;
+    min-height: 100%;
+    background-color: #F5F5F5;
+}
+
+.altered-page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    a {
+        cursor: pointer;
+        color: $altered-blue;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: underline;
+            color: $altered-blue;
+        }
+    }
+
+    hr {
+        border-top-color: darken($altered-light-gray, 10%);
+    }
+
+    .text-muted {
+        color: #999999;
+    }
+
+    .text-danger {
+        color: $error-red;
+    }
+}

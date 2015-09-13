@@ -1,0 +1,45 @@
+.altered-important {
+    font-weight: 800;
+}
+.altered-truncate {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.altered-nowrap {
+    white-space: nowrap;
+}
+
+.ng-cloak {
+    display: none !important;
+}
+
+.altered-no-top-border {
+    border-top: 0;
+}
+
+.altered-margin-top {
+    margin-top: 18px;
+}
+
+.altered-margin-bottom {
+    margin-bottom: 18px;
+}
+
+.altered-no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.altered-margin-top-double {
+    margin-top: 36px;
+}
+
+.altered-margin-bottom-double {
+    margin-bottom: 36px;
+}
+
+.altered-margin-bottom-none {
+    margin-bottom: 0 !important;
+}

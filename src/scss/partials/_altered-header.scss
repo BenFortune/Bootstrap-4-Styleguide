@@ -1,0 +1,39 @@
+.altered-header {
+    padding: 45px 0 15px 0;
+    border-bottom: 1px solid darken($altered-light-gray, 10%);
+    background: #FFFFFF;
+
+    h1,
+    h2 {
+        font: italic 300 32px/1.5 $roboto-condensed;
+        margin: 0;
+        color: $altered-red;
+    }
+
+    .altered-drawer-toggle {
+        font-size: 32px;
+        float: right;
+        color: $altered-red;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            color: $altered-red;
+        }
+
+        .icon-add-3 {
+            display: none;
+        }
+
+        &.collapsed {
+            .icon-add-3 {
+                display: inline;
+            }
+
+            .icon-minus-3 {
+                display: none;
+            }
+        }
+    }
+}

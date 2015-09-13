@@ -1,0 +1,37 @@
+// GET BOOTSTRAP 4 FILES
+@import '../../bootstrap-4.0.0-alpha/scss/bootstrap.scss';
+
+// PARTIALS
+
+@import 'partials/_altered-vars';
+@import 'partials/_altered-page';
+@import 'partials/_altered-header';
+@import 'partials/_altered-helpers';
+
+// PAGE OVERRIDES
+.altered-h1 {
+    color: $altered-red;
+    font: {
+        family: $roboto-condensed;
+        style: italic;
+    }
+}
+.altered-component-header {
+    h2 {
+        margin: 0 0 1em;
+        padding-bottom: .5em;
+        font: {
+            family: $roboto-condensed;
+            style: italic;
+        }
+        color: $altered-dark-gray;
+        border-bottom: 1px solid $altered-gray-90;
+    }
+}
+
+.component-group {
+    .group-header {
+        font-weight: 300;
+        color: $altered-gray;
+    }
+}
