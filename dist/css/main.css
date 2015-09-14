@@ -4668,6 +4668,87 @@ a.bg-danger:hover {
   .hidden-print .hidden-print {
     display: none !important; } }
 
+.altered-important {
+  font-weight: 800; }
+
+.altered-truncate {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.altered-nowrap {
+  white-space: nowrap; }
+
+.ng-cloak {
+  display: none !important; }
+
+.altered-no-top-border {
+  border-top: 0; }
+
+.altered-margin-top {
+  margin-top: 18px; }
+
+.altered-margin-bottom {
+  margin-bottom: 18px; }
+
+.altered-no-margin-bottom {
+  margin-bottom: 0; }
+
+.altered-margin-top-double {
+  margin-top: 36px; }
+
+.altered-margin-bottom-double {
+  margin-bottom: 36px; }
+
+.altered-margin-bottom-none {
+  margin-bottom: 0 !important; }
+
+.altered-page h1,
+.altered-modal .modal-body h1 {
+  font: italic 300 32px/1.5 "Roboto Condensed", sans-serif; }
+
+.altered-page h2,
+.altered-modal .modal-body h2 {
+  font: italic 300 24px/1.5 "Roboto Condensed", sans-serif; }
+
+.altered-page h3,
+.altered-modal .modal-body h3 {
+  font: italic 300 18px/1.5 "Roboto Condensed", sans-serif; }
+
+.altered-page h4,
+.altered-modal .modal-body h4 {
+  font: italic 300 16px/1.5 "Roboto Condensed", sans-serif; }
+
+.altered-page h5,
+.altered-page h6,
+.altered-modal .modal-body h5,
+.altered-modal .modal-body h6 {
+  font: italic 300 14px/1.5 "Roboto Condensed", sans-serif;
+  text-transform: uppercase; }
+
+.altered-page strong,
+.altered-modal .modal-body strong {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-seri;
+  font-weight: 600; }
+
+.altered-page small,
+.altered-modal .modal-body small {
+  font-size: 12px; }
+
+.altered-page p.altered-underline,
+.altered-modal .modal-body p.altered-underline {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E5E5E5; }
+
+.altered-page .altered-label,
+.altered-modal .modal-body .altered-label {
+  font-size: 15px;
+  display: inline-block;
+  padding: 4px 8px;
+  color: #FFFFFF;
+  background: #999999; }
+
 html {
   height: 100%; }
 
@@ -4721,41 +4802,18 @@ body {
     .altered-header .altered-drawer-toggle.collapsed .icon-minus-3 {
       display: none; }
 
-.altered-important {
-  font-weight: 800; }
-
-.altered-truncate {
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; }
-
-.altered-nowrap {
-  white-space: nowrap; }
-
-.ng-cloak {
-  display: none !important; }
-
-.altered-no-top-border {
-  border-top: 0; }
-
-.altered-margin-top {
-  margin-top: 18px; }
-
-.altered-margin-bottom {
-  margin-bottom: 18px; }
-
-.altered-no-margin-bottom {
-  margin-bottom: 0; }
-
-.altered-margin-top-double {
-  margin-top: 36px; }
-
-.altered-margin-bottom-double {
-  margin-bottom: 36px; }
-
-.altered-margin-bottom-none {
-  margin-bottom: 0 !important; }
+.altered-pill {
+  display: inline;
+  padding: 5px 10px;
+  background-color: #FFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 30px; }
+  .altered-pill span {
+    margin-left: 5px;
+    padding: 0 3px;
+    color: #FFF;
+    background-color: #E5E5E5;
+    border-radius: 30px; }
 
 .altered-h1 {
   color: #CC0000;
@@ -4771,5 +4829,8 @@ body {
   border-bottom: 1px solid #E5E5E5; }
 
 .component-group .group-header {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-seri;
+  font-style: normal;
+  font-size: 24px;
   font-weight: 300;
   color: #999999; }

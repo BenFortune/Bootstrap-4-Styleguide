@@ -1,0 +1,46 @@
+.altered-page,
+.altered-modal .modal-body {
+    h1 {
+        font: italic 300 32px/1.5 $roboto-condensed;
+    }
+
+    h2 {
+        font: italic 300 24px/1.5 $roboto-condensed;
+    }
+
+    h3 {
+        font: italic 300 18px/1.5 $roboto-condensed;
+    }
+
+    h4 {
+        font: italic 300 16px/1.5 $roboto-condensed;
+    }
+
+    h5,
+    h6 {
+        font: italic 300 14px/1.5 $roboto-condensed;
+        text-transform: uppercase;
+    }
+
+    strong {
+        font-family: $helvetica-neue;
+        font-weight: 600;
+    }
+
+    small {
+        font-size: 12px;
+    }
+
+    p.altered-underline {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $altered-gray-90;
+    }
+
+    .altered-label {
+        font-size: 15px;
+        display: inline-block;
+        padding: 4px 8px;
+        color: #FFFFFF;
+        background: $altered-gray;
+    }
+}

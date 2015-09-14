@@ -1,12 +1,13 @@
 // GET BOOTSTRAP 4 FILES
-@import '../../bootstrap-4.0.0-alpha/scss/bootstrap.scss';
+@import '../../bootstrap-4.0.0-alpha/scss/bootstrap';
 
-// PARTIALS
-
+// BRAND SPECIFIC PARTIALS
 @import 'partials/_altered-vars';
+@import 'partials/_altered-helpers';
+@import 'partials/_altered-typography';
 @import 'partials/_altered-page';
 @import 'partials/_altered-header';
-@import 'partials/_altered-helpers';
+@import 'partials/_altered-pill';
 
 // PAGE OVERRIDES
 .altered-h1 {
@@ -31,7 +32,12 @@
 
 .component-group {
     .group-header {
-        font-weight: 300;
+        font: {
+            family: $helvetica-neue;
+            style: normal;
+            size: 24px;
+            weight: 300;
+        }
         color: $altered-gray;
     }
 }

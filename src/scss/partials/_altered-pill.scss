@@ -1,0 +1,14 @@
+.altered-pill {
+    display: inline;
+    padding: 5px 10px;
+    background-color: #FFF;
+    border: 1px solid $altered-gray-90;
+    border-radius: 30px;
+    span {
+        margin-left: 5px;
+        padding: 0 3px;
+        color: #FFF;
+        background-color: $altered-gray-90;
+        border-radius: 30px;
+    }
+}
