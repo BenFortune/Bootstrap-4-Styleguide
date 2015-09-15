@@ -1,14 +1,24 @@
 .altered-pill {
-    display: inline;
-    padding: 5px 10px;
-    background-color: #FFF;
-    border: 1px solid $altered-gray-90;
-    border-radius: 30px;
+    display:inline-block;
+      position: relative;
+      padding:5px 15px;
+      line-height:1;
+      background:#FFF;
+      border:1px solid $altered-gray-90;
+      border-radius:20px;
     span {
-        margin-left: 5px;
-        padding: 0 3px;
-        color: #FFF;
-        background-color: $altered-gray-90;
-        border-radius: 30px;
+        display: inline-block;
+      	margin-left: 3px;
+      	padding: 1px 5px 3px;
+      	color:#FFF;
+      	font-size: 13px;
+      	font-weight: 300;
+        line-height: 1;
+        cursor:pointer;
+      	background-color: #CCC;
+      	border-radius: 8px;
+        &:hover, &:focus, &:active {
+          background-color:#E5E5E5;
+        }
     }
 }
