@@ -1,6 +1,7 @@
 .altered-pill {
     display:inline-block;
       position: relative;
+      margin-bottom:5px;
       padding:5px 15px;
       line-height:1;
       background:#FFF;
@@ -9,16 +10,21 @@
     span {
         display: inline-block;
       	margin-left: 3px;
-      	padding: 1px 5px 3px;
+      	padding: 0 5px 3px;
       	color:#FFF;
       	font-size: 13px;
       	font-weight: 300;
         line-height: 1;
+        vertical-align: top;
         cursor:pointer;
       	background-color: #CCC;
       	border-radius: 8px;
         &:hover, &:focus, &:active {
           background-color:#E5E5E5;
         }
+    }
+    &.add {
+        margin-left:0;
+        padding-left:10px;
     }
 }
