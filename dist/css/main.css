@@ -4848,3 +4848,16 @@ body {
   font-size: 24px;
   font-weight: 300;
   color: #999999; }
+
+.grid-demo .header {
+  height: 50px;
+  padding: 10px 20px 0 0;
+  background-color: #DAEEFF; }
+
+.grid-demo .left-col {
+  height: 75px;
+  background-color: #957BBE; }
+
+.grid-demo .right-col {
+  height: 75px;
+  background-color: #FAE3C4; }

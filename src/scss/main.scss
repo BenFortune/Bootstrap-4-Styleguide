@@ -41,3 +41,20 @@
         color: $altered-gray;
     }
 }
+
+// Grid Demo
+.grid-demo {
+    .header {
+        height: 50px;
+        padding: 10px 20px 0 0;
+        background-color: $demo-header;
+    }
+    .left-col {
+        height: 75px;
+        background-color: $demo-left-col;
+    }
+    .right-col {
+        height: 75px;
+        background-color: $demot-right-col;
+    }
+}
