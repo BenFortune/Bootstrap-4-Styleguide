@@ -4704,44 +4704,45 @@ a.bg-danger:hover {
 .altered-margin-bottom-none {
   margin-bottom: 0 !important; }
 
-.altered-page h1,
+.altered-page h1, .grid-demo h1,
 .altered-modal .modal-body h1 {
   font: italic 300 32px/1.5 "Roboto Condensed", sans-serif; }
 
-.altered-page h2,
+.altered-page h2, .grid-demo h2,
 .altered-modal .modal-body h2 {
   font: italic 300 24px/1.5 "Roboto Condensed", sans-serif; }
 
-.altered-page h3,
+.altered-page h3, .grid-demo h3,
 .altered-modal .modal-body h3 {
   font: italic 300 18px/1.5 "Roboto Condensed", sans-serif; }
 
-.altered-page h4,
+.altered-page h4, .grid-demo h4,
 .altered-modal .modal-body h4 {
   font: italic 300 16px/1.5 "Roboto Condensed", sans-serif; }
 
 .altered-page h5,
-.altered-page h6,
+.altered-page h6, .grid-demo h5,
+.grid-demo h6,
 .altered-modal .modal-body h5,
 .altered-modal .modal-body h6 {
   font: italic 300 14px/1.5 "Roboto Condensed", sans-serif;
   text-transform: uppercase; }
 
-.altered-page strong,
+.altered-page strong, .grid-demo strong,
 .altered-modal .modal-body strong {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-seri;
   font-weight: 600; }
 
-.altered-page small,
+.altered-page small, .grid-demo small,
 .altered-modal .modal-body small {
   font-size: 12px; }
 
-.altered-page p.altered-underline,
+.altered-page p.altered-underline, .grid-demo p.altered-underline,
 .altered-modal .modal-body p.altered-underline {
   padding-bottom: 10px;
   border-bottom: 1px solid #E5E5E5; }
 
-.altered-page .altered-label,
+.altered-page .altered-label, .grid-demo .altered-label,
 .altered-modal .modal-body .altered-label {
   font-size: 15px;
   display: inline-block;
@@ -4851,7 +4852,6 @@ body {
 
 .grid-demo .header {
   height: 50px;
-  padding: 10px 20px 0 0;
   background-color: #DAEEFF; }
 
 .grid-demo .left-col {
@@ -4861,3 +4861,6 @@ body {
 .grid-demo .right-col {
   height: 75px;
   background-color: #FAE3C4; }
+
+.grid-demo.container-fluid {
+  margin-top: 20px; }
