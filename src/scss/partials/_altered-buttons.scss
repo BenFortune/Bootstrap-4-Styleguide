@@ -1,0 +1,107 @@
+.altered-btn,
+.altered-page .altered-btn {
+    font-size: 18px;
+    line-height: 1;
+    padding: 12px 15px;
+    color: #FFFFFF;
+    border: 1px solid $altered-blue;
+    background-color: $altered-blue;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: #FFFFFF;
+        border-color: $altered-light-blue;
+        outline: 0 !important;
+        background-color: $altered-light-blue;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
+    &:disabled {
+        color: #B5B5B5;
+        border-color: #B5B5B5;
+        background-color: #FAFAFA;
+    }
+}
+
+.altered-btn-small {
+    font-size: 16px !important;
+    padding: 7px 15px !important;
+}
+
+.altered-btn-link,
+.altered-page .altered-btn-link {
+    font-size: 18px;
+    padding: 12px 15px;
+    color: $altered-blue;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.altered-btn-secondary,
+.altered-page .altered-btn-secondary {
+    font-size: 18px;
+    line-height: 1;
+    padding: 12px 15px;
+    color: $altered-blue;
+    border: 1px solid $altered-blue;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        color: $altered-blue;
+        border-color: $altered-light-blue;
+        outline: 0 !important;
+        background-color: #FFFFFF;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.altered-page .input-group-btn {
+    .altered-btn {
+        color: $altered-blue;
+        border-color: darken($altered-light-gray, 10%);
+        background-color: $altered-light-gray;
+
+        &:hover,
+        &:focus {
+            color: #FFFFFF;
+            border-color: $altered-light-blue;
+            background: $altered-light-blue;
+        }
+    }
+}
+
+.altered-btn-icon,
+.altered-page .altered-btn-icon {
+    font-size: 30px;
+    padding: 0;
+    color: $altered-blue;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        color: $altered-light-blue;
+        border: none;
+        outline: 0 !important;
+        background-color: transparent;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}

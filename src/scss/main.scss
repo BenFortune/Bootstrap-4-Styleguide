@@ -7,56 +7,94 @@
 @import 'partials/_altered-typography';
 @import 'partials/_altered-page';
 @import 'partials/_altered-header';
-@import 'partials/_altered-pill';
+@import 'partials/_altered-forms';
+@import 'partials/_altered-buttons';
+@import 'partials/_altered-pills';
 
 // PAGE OVERRIDES
 .altered-h1 {
-    color: $altered-red;
-    font: {
-        family: $roboto-condensed;
-        style: italic;
-    }
+	color: $altered-red;
+	font: {
+		family: $roboto-condensed;
+		style: italic;
+	}
 }
 .altered-component-header {
-    h2 {
-        margin: 0 0 1em;
-        padding-bottom: .5em;
-        font: {
-            family: $roboto-condensed;
-            style: italic;
-        }
-        color: $altered-dark-gray;
-        border-bottom: 1px solid $altered-gray-90;
-    }
+	h2 {
+		margin: 0 0 1em;
+		padding-bottom: .5em;
+		font: {
+			family: $roboto-condensed;
+			style: italic;
+		}
+		color: $altered-dark-gray;
+		border-bottom: 1px solid $altered-gray-90;
+	}
 }
 
 .component-group {
-    .group-header {
-        font: {
-            family: $helvetica-neue;
-            style: normal;
-            size: 24px;
-            weight: 300;
-        }
-        color: $altered-gray;
-    }
+	margin-bottom: 20px;
+
+	.group-header {
+		font: {
+			family: $helvetica-neue;
+			style: normal;
+			size: 24px;
+			weight: 300;
+		}
+		color: $altered-gray;
+	}
 }
 
-// Grid Demo
+// Demo
 .grid-demo {
-    .header {
-        height: 50px;
-        background-color: $demo-header;
-    }
-    .left-col {
-        height: 75px;
-        background-color: $demo-left-col;
-    }
-    .right-col {
-        height: 75px;
-        background-color: $demot-right-col;
-    }
-    &.container-fluid {
-        margin-top: 20px;
-    }
+	.header {
+		height: 50px;
+		background-color: $demo-header;
+	}
+	.left-col {
+		height: 75px;
+		background-color: $demo-left-col;
+	}
+	.right-col {
+		height: 75px;
+		background-color: $demot-right-col;
+	}
+	&.container-fluid {
+		margin-top: 20px;
+	}
+}
+.color-group {
+	.color-wrapper {
+		padding-bottom: 15px;
+		background: #FFF none;
+		border: 1px solid $altered-gray;
+		.color-tile {
+			height: 40px;
+			margin-bottom: 15px;
+			&.altered-red {
+				background-color: $altered-red;
+			}
+			&.altered-blue {
+				background-color: $altered-blue;
+			}
+			&.altered-light-blue {
+				background-color: $altered-light-blue;
+			}
+			&.altered-dark-gray {
+				background-color: $altered-dark-gray;
+			}
+			&.altered-gray {
+				background-color: $altered-gray;
+			}
+			&.altered-light-gray {
+				background-color: $altered-light-gray;
+			}
+		}
+		p {
+			line-height: 1;
+			padding-left: 10px;
+			margin-bottom: 0;
+		}
+	}
 }

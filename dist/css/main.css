@@ -4803,6 +4803,99 @@ body {
     .altered-header .altered-drawer-toggle.collapsed .icon-minus-3 {
       display: none; }
 
+.altered-btn,
+.altered-page .altered-btn {
+  font-size: 18px;
+  line-height: 1;
+  padding: 12px 15px;
+  color: #FFFFFF;
+  border: 1px solid #006699;
+  background-color: #006699; }
+  .altered-btn:hover,
+  .altered-btn:focus,
+  .altered-page .altered-btn:hover,
+  .altered-page .altered-btn:focus {
+    text-decoration: none;
+    color: #FFFFFF;
+    border-color: #66CCFF;
+    outline: 0 !important;
+    background-color: #66CCFF; }
+  .altered-btn:active,
+  .altered-page .altered-btn:active {
+    box-shadow: none; }
+  .altered-btn:disabled,
+  .altered-page .altered-btn:disabled {
+    color: #B5B5B5;
+    border-color: #B5B5B5;
+    background-color: #FAFAFA; }
+
+.altered-btn-small {
+  font-size: 16px !important;
+  padding: 7px 15px !important; }
+
+.altered-btn-link,
+.altered-page .altered-btn-link {
+  font-size: 18px;
+  padding: 12px 15px;
+  color: #006699; }
+  .altered-btn-link:hover,
+  .altered-btn-link:focus,
+  .altered-page .altered-btn-link:hover,
+  .altered-page .altered-btn-link:focus {
+    text-decoration: underline; }
+  .altered-btn-link:active,
+  .altered-page .altered-btn-link:active {
+    box-shadow: none; }
+
+.altered-btn-secondary,
+.altered-page .altered-btn-secondary {
+  font-size: 18px;
+  line-height: 1;
+  padding: 12px 15px;
+  color: #006699;
+  border: 1px solid #006699;
+  background-color: transparent; }
+  .altered-btn-secondary:hover,
+  .altered-btn-secondary:focus,
+  .altered-page .altered-btn-secondary:hover,
+  .altered-page .altered-btn-secondary:focus {
+    color: #006699;
+    border-color: #66CCFF;
+    outline: 0 !important;
+    background-color: #FFFFFF; }
+  .altered-btn-secondary:active,
+  .altered-page .altered-btn-secondary:active {
+    box-shadow: none; }
+
+.altered-page .input-group-btn .altered-btn {
+  color: #006699;
+  border-color: gainsboro;
+  background-color: #F5F5F5; }
+  .altered-page .input-group-btn .altered-btn:hover,
+  .altered-page .input-group-btn .altered-btn:focus {
+    color: #FFFFFF;
+    border-color: #66CCFF;
+    background: #66CCFF; }
+
+.altered-btn-icon,
+.altered-page .altered-btn-icon {
+  font-size: 30px;
+  padding: 0;
+  color: #006699;
+  border: none;
+  background-color: transparent; }
+  .altered-btn-icon:hover,
+  .altered-btn-icon:focus,
+  .altered-page .altered-btn-icon:hover,
+  .altered-page .altered-btn-icon:focus {
+    color: #66CCFF;
+    border: none;
+    outline: 0 !important;
+    background-color: transparent; }
+  .altered-btn-icon:active,
+  .altered-page .altered-btn-icon:active {
+    box-shadow: none; }
+
 .altered-pill {
   display: inline-block;
   position: relative;
@@ -4843,12 +4936,14 @@ body {
   color: #333333;
   border-bottom: 1px solid #E5E5E5; }
 
-.component-group .group-header {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-seri;
-  font-style: normal;
-  font-size: 24px;
-  font-weight: 300;
-  color: #999999; }
+.component-group {
+  margin-bottom: 20px; }
+  .component-group .group-header {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-seri;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 300;
+    color: #999999; }
 
 .grid-demo .header {
   height: 50px;
@@ -4864,3 +4959,27 @@ body {
 
 .grid-demo.container-fluid {
   margin-top: 20px; }
+
+.color-group .color-wrapper {
+  padding-bottom: 15px;
+  background: #FFF none;
+  border: 1px solid #999999; }
+  .color-group .color-wrapper .color-tile {
+    height: 40px;
+    margin-bottom: 15px; }
+    .color-group .color-wrapper .color-tile.altered-red {
+      background-color: #CC0000; }
+    .color-group .color-wrapper .color-tile.altered-blue {
+      background-color: #006699; }
+    .color-group .color-wrapper .color-tile.altered-light-blue {
+      background-color: #66CCFF; }
+    .color-group .color-wrapper .color-tile.altered-dark-gray {
+      background-color: #333333; }
+    .color-group .color-wrapper .color-tile.altered-gray {
+      background-color: #999999; }
+    .color-group .color-wrapper .color-tile.altered-light-gray {
+      background-color: #F5F5F5; }
+  .color-group .color-wrapper p {
+    line-height: 1;
+    padding-left: 10px;
+    margin-bottom: 0; }
