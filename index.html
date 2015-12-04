@@ -129,23 +129,30 @@
 					<div class="col-sm-4">
 						<h3 class="group-header">Float Labels</h3>
 						<form class="altered-form">
-							<div class="form-group">
-								<label for="email">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
+							<div class="form-group float-label">
+								<label for="email" data-float-label>Email</label>
+								<input type="email" class="form-control" placeholder="Email">
 							</div>
-							<div class="form-group has-warning">
-								<label for="email">Email</label>
-								<input type="email" class="form-control form-control-warning" id="email" placeholder="Email">
+							<div class="form-group has-warning float-label">
+								<label for="email" data-float-label>Email</label>
+								<input type="email" class="form-control form-control-warning" placeholder="Email">
 								<small class="text-muted">Please complete your email</small>
 							</div>
-							<div class="form-group has-error">
-								<label for="email">Email</label>
-								<input type="email" class="form-control form-control-error" id="email" placeholder="Email">
+							<div class="form-group has-error float-label">
+								<label for="email" data-float-label>Email</label>
+								<input type="email" class="form-control form-control-error" placeholder="Email">
 								<small class="text-muted">Your email does not appear to be valid</small>
 							</div>
-							<div class="form-group has-success">
-								<label for="email">Email</label>
-								<input type="email" class="form-control form-control-success" id="email" placeholder="Email">
+							<div class="form-group has-success float-label">
+								<label for="email" data-float-label>Email</label>
+								<input type="email" class="form-control form-control-success" placeholder="Email">
+							</div>
+							<div class="dice-toggle-wrapper">
+								<input checked type="checkbox">
+								<span class="dice-toggle-control">
+									<span class="dice-toggle-label">On</span>
+									<span class="dice-toggle-trigger"></span>
+								</span>
 							</div>
 						</form>
 					</div>

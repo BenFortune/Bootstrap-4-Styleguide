@@ -4803,6 +4803,43 @@ body {
     .altered-header .altered-drawer-toggle.collapsed .icon-minus-3 {
       display: none; }
 
+.altered-form .dice-toggle-wrapper {
+  position: relative;
+  height: 30px; }
+  .altered-form .dice-toggle-wrapper input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0; }
+  .altered-form .dice-toggle-wrapper .dice-toggle-control {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+    padding: 5px 35px 5px 10px;
+    background-color: #FFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 20px; }
+    .altered-form .dice-toggle-wrapper .dice-toggle-control.on {
+      color: #FFF;
+      background-color: #66CCFF; }
+    .altered-form .dice-toggle-wrapper .dice-toggle-control.off {
+      padding: 5px 10px 5px 35px;
+      color: #FFF;
+      background-color: #999999; }
+      .altered-form .dice-toggle-wrapper .dice-toggle-control.off .dice-toggle-trigger {
+        left: 0; }
+    .altered-form .dice-toggle-wrapper .dice-toggle-control .dice-toggle-trigger {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      width: 30px;
+      height: 28px;
+      background-color: #F5F5F5;
+      border: 1px solid #E5E5E5;
+      border-radius: 20px; }
+
 .altered-btn,
 .altered-page .altered-btn {
   font-size: 18px;
@@ -4922,6 +4959,84 @@ body {
   .altered-pill.add {
     margin-left: 0;
     padding-left: 10px; }
+
+.altered-float-label {
+  background: #FFFFFF;
+  border-radius: 2px; }
+  .altered-float-label label {
+    position: absolute;
+    margin: 10px 0 0 11px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #B5B5B5;
+    transition: all 0.2s ease-out;
+    z-index: 1;
+    pointer-events: none; }
+  .altered-float-label input {
+    z-index: 2;
+    position: relative;
+    background: transparent;
+    transition: padding 0.2s ease-out; }
+
+.altered-float-label-on label {
+  margin-top: 4px;
+  font-weight: normal;
+  font-size: 12px;
+  z-index: 3; }
+
+.altered-float-label-on input {
+  padding-top: 17px !important;
+  padding-bottom: 3px !important; }
+
+label[float-label],
+label[data-float-label] {
+  position: absolute;
+  margin: 15px 0 0 17px;
+  font-weight: normal;
+  font-size: 12px;
+  color: #b5b5b5;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  outline: 0; }
+
+.form-control-icon,
+label[float-label],
+label[data-float-label] {
+  cursor: text; }
+
+.has-icon label[float-label],
+.has-icon label[data-float-label] {
+  margin-left: 33.5px; }
+
+label[float-label].float-label-on,
+label[data-float-label].float-label-on {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 4px; }
+
+input {
+  transition: padding 0.3s ease-out;
+  -webkit-transition: padding 0.3s ease-out; }
+
+input.float-label {
+  padding-top: 17px !important;
+  padding-bottom: 3px !important; }
+
+input.float-label::-webkit-input-placeholder {
+  color: transparent; }
+
+input.float-label:-moz-placeholder {
+  color: transparent; }
+
+input.float-label::-moz-placeholder {
+  color: transparent; }
 
 .altered-h1 {
   color: #CC0000;
