@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$('[data-toggle="tooltip"]').tooltip()
 	});
 
-	// BEGIN Float Label Work
+	// BEGIN Float Label
 	var floatInput = $('.float-label input');
 	var onClass = "float-label-on";
 	var showClass = "float-label";
@@ -29,25 +29,24 @@ $(document).ready(function() {
 			$(this).prev().addClass(onClass);
 		}
 	}
-	// END Float Label Work
+	// END Float Label
 
-	(function diceToggle() {
-		console.log('default toggle status');
-		var diceToggle = $('.dice-toggle-control');
-		var diceToggleLabel = $('.dice-toggle-label');
-		diceToggle.addClass('on');
+	// BEGIN Dice Toggle
+	var diceToggle = $('.altered-toggle-control');
+	var diceToggleLabel = $('.altered-toggle-label');
+	diceToggle.addClass('on');
 
-		// Click event
-		diceToggle.on('click', function() {
-			console.log('toggle clicked');
-			if ($(this).hasClass('on')) {
-				$(this).removeClass('on').addClass('off');
-				diceToggleLabel.text('Off');
-			} else {
-				$(this).removeClass('off').addClass('on');
-				diceToggleLabel.text('On');
-			}
-		})
-	}());
+	// Click event
+	diceToggle.on('click', function() {
+		console.log('toggle clicked');
+		if ($(this).hasClass('on')) {
+			$(this).removeClass('on').addClass('off');
+			diceToggleLabel.text('Off');
+		} else {
+			$(this).removeClass('off').addClass('on');
+			diceToggleLabel.text('On');
+		}
+	});
+	// END Dice Toggle
 
 });

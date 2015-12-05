@@ -59,7 +59,7 @@
 	}
 	.right-col {
 		height: 75px;
-		background-color: $demot-right-col;
+		background-color: $demo-right-col;
 	}
 	&.container-fluid {
 		margin-top: 20px;
@@ -98,4 +98,7 @@
 			margin-bottom: 0;
 		}
 	}
+}
+.altered-toggle-wrapper {
+	margin-top: 30px;
 }

@@ -1,5 +1,5 @@
 .altered-form {
-	.dice-toggle-wrapper {
+	.altered-toggle-wrapper {
 		position:relative;
 		height:30px;
 		input {
@@ -7,12 +7,13 @@
 			z-index: -1;
 			opacity: 0;
 		}
-		.dice-toggle-control {
+		.altered-toggle-control {
 			display:inline-block;
 			height:30px;
 			position:relative;
 			z-index:1;
 			padding:5px 35px 5px 10px;
+			line-height:1;
 			background-color:#FFF;
 			border:1px solid $altered-gray-90;
 			border-radius:20px;
@@ -24,11 +25,11 @@
 				padding:5px 10px 5px 35px;
 				color: #FFF;
 				background-color: $altered-gray;
-				.dice-toggle-trigger {
+				.altered-toggle-trigger {
 					left:0;
 				}
 			}
-			.dice-toggle-trigger {
+			.altered-toggle-trigger {
 				display:block;
 				position:absolute;
 				right:0;
