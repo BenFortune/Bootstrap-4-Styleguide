@@ -4803,6 +4803,9 @@ body {
     .altered-header .altered-drawer-toggle.collapsed .icon-minus-3 {
       display: none; }
 
+.altered-form .form-control {
+  border: 1px solid #E5E5E5; }
+
 .altered-form .altered-toggle-wrapper {
   position: relative;
   height: 30px; }
@@ -4840,6 +4843,35 @@ body {
       background-color: #F5F5F5;
       border: 1px solid #E5E5E5;
       border-radius: 20px; }
+
+.altered-form .contact-form {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: tranparent; }
+  .altered-form .contact-form label {
+    display: inline-block;
+    height: 53px;
+    padding-left: 0;
+    padding-right: 0;
+    color: #999999;
+    text-align: center;
+    line-height: 53px;
+    background-color: #FFF;
+    border-left: 1px solid #E5E5E5;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    border-radius: 0.3rem 0 0 0.3rem; }
+  .altered-form .contact-form .col-sm-8 {
+    margin-left: -2px;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0; }
+    .altered-form .contact-form .col-sm-8 input {
+      border-radius: 0 0.3rem 0.3rem 0; }
+      .altered-form .contact-form .col-sm-8 input.form-control {
+        box-shadow: none; }
+      .altered-form .contact-form .col-sm-8 input:focus {
+        border: 1px solid #66CCFF; }
 
 .altered-btn,
 .altered-page .altered-btn {

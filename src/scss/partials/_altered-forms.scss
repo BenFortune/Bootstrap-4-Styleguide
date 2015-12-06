@@ -1,4 +1,7 @@
 .altered-form {
+	.form-control {
+		border:1px solid $altered-gray-90;
+	}
 	.altered-toggle-wrapper {
 		position:relative;
 		height:30px;
@@ -40,6 +43,40 @@
 				background-color:$altered-light-gray;
 				border:1px solid $altered-gray-90;
 				border-radius:20px
+			}
+		}
+	}
+	.contact-form {
+		margin-left:0;
+		margin-right:0;
+		background-color:tranparent;
+		label {
+			display:inline-block;
+			height:53px;
+			padding-left:0;
+			padding-right:0;
+			color:$altered-gray;
+			text-align:center;
+			line-height:53px;
+			background-color:#FFF;
+			border-left:1px solid $altered-gray-90;
+			border-top: 1px solid $altered-gray-90;
+			border-bottom:1px solid $altered-gray-90;
+			border-radius:.3rem 0 0 .3rem;
+		}
+		.col-sm-8 {
+			margin-left:-2px;
+			margin-right:0;
+			padding-left:0;
+			padding-right:0;
+			input {
+				border-radius:0 .3rem .3rem 0;
+				&.form-control {
+					box-shadow:none;
+				}
+				&:focus {
+					border:1px solid $altered-light-blue;
+				}
 			}
 		}
 	}
