@@ -4805,6 +4805,12 @@ body {
 
 .altered-form .form-control {
   border: 1px solid #E5E5E5; }
+  .altered-form .form-control.form-control-success {
+    border-color: #73BE46; }
+  .altered-form .form-control.form-control-error {
+    border-color: #CC0000; }
+  .altered-form .form-control.form-control-warning {
+    border-color: #FFB914; }
 
 .altered-form .altered-toggle-wrapper {
   position: relative;

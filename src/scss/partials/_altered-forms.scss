@@ -1,6 +1,14 @@
 .altered-form {
 	.form-control {
 		border:1px solid $altered-gray-90;
+		&.form-control-success {
+		}
+		&.form-control-error {
+			border-color:$altered-red;
+		}
+		&.form-control-warning {
+			border-color:$altered-yellow;
+		}
 	}
 	.altered-toggle-wrapper {
 		position:relative;
