@@ -3,6 +3,7 @@
 ---
 
 ####TO DO
+- Make fully responsive
 - Separate Main JS into modules
 - Get SVG Icons working
-- Clean up toggle styling
+- Work on Select dropdowns

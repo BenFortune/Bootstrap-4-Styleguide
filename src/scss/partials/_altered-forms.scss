@@ -88,4 +88,44 @@
 			}
 		}
 	}
+	.altered-select {
+		button {
+			color: $altered-dark-gray;
+			border-color: $altered-gray;
+			&:hover {
+				color: $altered-dark-gray;
+				border-color: $altered-gray;
+			}
+		}
+		.dropdown-menu {
+			color: $altered-dark-gray;
+			&:hover, {
+				color: $altered-dark-gray;
+				text-decoration: none;
+			}
+		}
+		&.open {
+			button {
+				color: $altered-dark-gray;
+				border-color: $altered-gray;
+			}
+			.dropdown-menu {
+				color: $altered-dark-gray;
+				&:hover, {
+					color: $altered-dark-gray;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+.altered-page {
+	.altered-select {
+		a {
+			color: $altered-dark-gray;
+			&:focus {
+				color: $altered-dark-gray;
+			}
+		}
+	}
 }

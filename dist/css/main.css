@@ -4805,8 +4805,6 @@ body {
 
 .altered-form .form-control {
   border: 1px solid #E5E5E5; }
-  .altered-form .form-control.form-control-success {
-    border-color: #73BE46; }
   .altered-form .form-control.form-control-error {
     border-color: #CC0000; }
   .altered-form .form-control.form-control-warning {
@@ -4878,6 +4876,34 @@ body {
         box-shadow: none; }
       .altered-form .contact-form .col-sm-8 input:focus {
         border: 1px solid #66CCFF; }
+
+.altered-form .altered-select button {
+  color: #333333;
+  border-color: #999999; }
+  .altered-form .altered-select button:hover {
+    color: #333333;
+    border-color: #999999; }
+
+.altered-form .altered-select .dropdown-menu {
+  color: #333333; }
+  .altered-form .altered-select .dropdown-menu:hover {
+    color: #333333;
+    text-decoration: none; }
+
+.altered-form .altered-select.open button {
+  color: #333333;
+  border-color: #999999; }
+
+.altered-form .altered-select.open .dropdown-menu {
+  color: #333333; }
+  .altered-form .altered-select.open .dropdown-menu:hover {
+    color: #333333;
+    text-decoration: none; }
+
+.altered-page .altered-select a {
+  color: #333333; }
+  .altered-page .altered-select a:focus {
+    color: #333333; }
 
 .altered-btn,
 .altered-page .altered-btn {
