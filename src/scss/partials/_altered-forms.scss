@@ -118,6 +118,26 @@
 			}
 		}
 	}
+	.altered-slider {
+		.slider-track {
+			background-color:#FFF;
+			background-image:none;
+			box-shadow:none;
+		}
+		.slider-selection {
+			background-color:$altered-light-blue;
+			background-image:none;
+			box-shadow:none;
+		}
+		.slider-handle {
+			background-color:#FFF;
+			background-image:none;
+			border:1px solid #DDD;
+		}
+		.slider-track-high {
+			background-color:#CCC;
+		}	
+	}
 }
 .altered-page {
 	.altered-select {

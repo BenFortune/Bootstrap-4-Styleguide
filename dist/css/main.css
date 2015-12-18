@@ -4900,6 +4900,24 @@ body {
     color: #333333;
     text-decoration: none; }
 
+.altered-form .altered-slider .slider-track {
+  background-color: #FFF;
+  background-image: none;
+  box-shadow: none; }
+
+.altered-form .altered-slider .slider-selection {
+  background-color: #66CCFF;
+  background-image: none;
+  box-shadow: none; }
+
+.altered-form .altered-slider .slider-handle {
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #DDD; }
+
+.altered-form .altered-slider .slider-track-high {
+  background-color: #CCC; }
+
 .altered-page .altered-select a {
   color: #333333; }
   .altered-page .altered-select a:focus {
@@ -5166,3 +5184,6 @@ input.float-label::-moz-placeholder {
 
 .altered-toggle-wrapper {
   margin-top: 30px; }
+
+.altered-slider {
+  margin-top: 20px; }

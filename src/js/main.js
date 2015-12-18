@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	var mySlider = $("#slider").slider();
+		mySlider.slider('setValue', 8);
+
 	// Initialize Tooltip
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip()
