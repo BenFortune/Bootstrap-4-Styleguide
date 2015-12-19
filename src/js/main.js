@@ -41,7 +41,6 @@ $(document).ready(function() {
 
 	// Click event
 	diceToggle.on('click', function() {
-		console.log('toggle clicked');
 		if ($(this).hasClass('on')) {
 			$(this).removeClass('on').addClass('off');
 			diceToggleLabel.text('Off');
