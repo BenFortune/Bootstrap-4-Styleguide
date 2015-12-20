@@ -1,4 +1,14 @@
 .altered-form {
+	li {
+		list-style-type: none;
+	}
+	.c-indicator {
+		background-color: $altered-gray-90;
+	}
+	.file-custom::before {
+		color: $altered-blue;
+		background-color: $altered-gray-90;
+	}
 	.form-control {
 		border:1px solid $altered-gray-90;
 		&.form-control-success {
@@ -99,9 +109,18 @@
 		}
 		.dropdown-menu {
 			color: $altered-dark-gray;
+			left: auto;
 			&:hover, {
 				color: $altered-dark-gray;
 				text-decoration: none;
+			}
+			ul {
+				padding-left: 1rem;
+				margin-bottom: 0;
+				li {
+					margin-top: .25rem;
+					margin-bottom: .25rem;
+				}
 			}
 		}
 		&.open {
@@ -136,7 +155,7 @@
 		}
 		.slider-track-high {
 			background-color:#CCC;
-		}	
+		}
 	}
 }
 .altered-page {
