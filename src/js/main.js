@@ -34,7 +34,7 @@ $(document).ready(function() {
 	}
 	// END Float Label
 
-	// BEGIN Dice Toggle
+	// BEGIN Toggle
 	var diceToggle = $('.altered-toggle-control');
 	var diceToggleLabel = $('.altered-toggle-label');
 	diceToggle.addClass('on');
@@ -49,6 +49,21 @@ $(document).ready(function() {
 			diceToggleLabel.text('On');
 		}
 	});
-	// END Dice Toggle
+	// END Toggle
+
+	// FORM GROUP BUTTON CHANGE
+	(function formBtnGroupChange() {
+		var channelBtn = $('.altered-btn-group-tab button');
+
+		channelBtn.on('click', function(e) {
+			var that = $(this);
+			e.preventDefault();
+			if (that.hasClass('inactive')) {
+				channelBtn.removeClass('active').addClass('inactive');
+				that.removeClass('inactive').addClass('active');
+			}
+		});
+	}());
+	// END FORM GROUP BUTTON CHANGE
 
 });
