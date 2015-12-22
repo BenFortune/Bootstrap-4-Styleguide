@@ -15,7 +15,6 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
-    "node-sass": "^3.4.2",
     "tether": "^1.1.0"
   }
 }
