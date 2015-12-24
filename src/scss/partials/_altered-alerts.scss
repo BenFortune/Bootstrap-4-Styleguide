@@ -1,0 +1,45 @@
+.altered-alert {
+	font-size: 16px;
+	color: #333333;
+	.alert-success {
+		border-color: #DFF0D8;
+		background-color: #DFF0D8;
+	}
+
+	.alert-danger {
+		border-color: #F2DEDE;
+		background-color: #F2DEDE;
+	}
+
+	.alert-warning {
+		border-color: #FCF8E3;
+		background-color: #FCF8E3;
+	}
+
+	.alert-info {
+		border-color: #E3F8FA;
+		background-color: #E3F8FA;
+	}
+	.altered-alert-banner {
+		margin-bottom: 0;
+		border-radius: 0;
+	}
+	.close:focus {
+		outline: none;
+	}
+
+	.close {
+		position: relative;
+		top: 0;
+		color: $altered-blue;
+		font-size: 1rem;
+		font-weight: 200;
+		line-height: 1.3;
+		opacity: 1;
+		text-shadow: none;
+	}
+}
+.container-fluid.altered-alert {
+	padding-left: 0;
+	padding-right: 0;
+}

@@ -4485,46 +4485,38 @@ a.bg-danger:focus, a.bg-danger:hover {
 .altered-margin-bottom-none {
   margin-bottom: 0 !important; }
 
-.altered-page h1, .grid-demo h1,
-.altered-modal .modal-body h1 {
+.altered-page h1, .altered-alert h1, .grid-demo h1, .altered-modal .modal-body h1 {
   font: italic 300 32px/1.5 "Roboto Condensed", sans-serif; }
 
-.altered-page h2, .grid-demo h2,
-.altered-modal .modal-body h2 {
+.altered-page h2, .altered-alert h2, .grid-demo h2, .altered-modal .modal-body h2 {
   font: italic 300 24px/1.5 "Roboto Condensed", sans-serif; }
 
-.altered-page h3, .grid-demo h3,
-.altered-modal .modal-body h3 {
+.altered-page h3, .altered-alert h3, .grid-demo h3, .altered-modal .modal-body h3 {
   font: italic 300 18px/1.5 "Roboto Condensed", sans-serif; }
 
-.altered-page h4, .grid-demo h4,
-.altered-modal .modal-body h4 {
+.altered-page h4, .altered-alert h4, .grid-demo h4, .altered-modal .modal-body h4 {
   font: italic 300 16px/1.5 "Roboto Condensed", sans-serif; }
 
 .altered-page h5,
-.altered-page h6, .grid-demo h5,
-.grid-demo h6,
-.altered-modal .modal-body h5,
+.altered-page h6, .altered-alert h5,
+.altered-alert h6, .grid-demo h5,
+.grid-demo h6, .altered-modal .modal-body h5,
 .altered-modal .modal-body h6 {
   font: italic 300 14px/1.5 "Roboto Condensed", sans-serif;
   text-transform: uppercase; }
 
-.altered-page strong, .grid-demo strong,
-.altered-modal .modal-body strong {
+.altered-page strong, .altered-alert strong, .grid-demo strong, .altered-modal .modal-body strong {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-seri;
   font-weight: 600; }
 
-.altered-page small, .grid-demo small,
-.altered-modal .modal-body small {
+.altered-page small, .altered-alert small, .grid-demo small, .altered-modal .modal-body small {
   font-size: 12px; }
 
-.altered-page p.altered-underline, .grid-demo p.altered-underline,
-.altered-modal .modal-body p.altered-underline {
+.altered-page p.altered-underline, .altered-alert p.altered-underline, .grid-demo p.altered-underline, .altered-modal .modal-body p.altered-underline {
   padding-bottom: 10px;
   border-bottom: 1px solid #E5E5E5; }
 
-.altered-page .altered-label, .grid-demo .altered-label,
-.altered-modal .modal-body .altered-label {
+.altered-page .altered-label, .altered-alert .altered-label, .grid-demo .altered-label, .altered-modal .modal-body .altered-label {
   font-size: 15px;
   display: inline-block;
   padding: 4px 8px;
@@ -4930,6 +4922,55 @@ input.float-label:-moz-placeholder {
 
 input.float-label::-moz-placeholder {
   color: transparent; }
+
+.altered-tooltip.in {
+  opacity: 1; }
+
+.altered-tooltip .tooltip-inner {
+  font-size: 16px;
+  padding: 10px 20px;
+  background: #333333; }
+
+.altered-tooltip.top {
+  padding: 10px 0; }
+  .altered-tooltip.top .tooltip-arrow {
+    margin-left: -10px;
+    border-width: 10px 10px 0;
+    border-top-color: #333333; }
+
+.altered-alert {
+  font-size: 16px;
+  color: #333333; }
+  .altered-alert .alert-success {
+    border-color: #DFF0D8;
+    background-color: #DFF0D8; }
+  .altered-alert .alert-danger {
+    border-color: #F2DEDE;
+    background-color: #F2DEDE; }
+  .altered-alert .alert-warning {
+    border-color: #FCF8E3;
+    background-color: #FCF8E3; }
+  .altered-alert .alert-info {
+    border-color: #E3F8FA;
+    background-color: #E3F8FA; }
+  .altered-alert .altered-alert-banner {
+    margin-bottom: 0;
+    border-radius: 0; }
+  .altered-alert .close:focus {
+    outline: none; }
+  .altered-alert .close {
+    position: relative;
+    top: 0;
+    color: #006699;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.3;
+    opacity: 1;
+    text-shadow: none; }
+
+.container-fluid.altered-alert {
+  padding-left: 0;
+  padding-right: 0; }
 
 .altered-h1 {
   color: #CC0000;
