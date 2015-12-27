@@ -157,6 +157,10 @@
 			background-color:#CCC;
 		}
 	}
+	// BOOTSTRAP OVERRIDES
+	.c-input > input:checked ~ .c-indicator {
+		background-color: $altered-light-blue;
+	}
 }
 .altered-page {
 	.altered-select {

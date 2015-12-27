@@ -14,6 +14,65 @@
 		<link rel="stylesheet" href="dist/css/main.css">
 	</head>
 	<body>
+		<!-- ADD MODALS HERE - PER DOCS, ADD AT TOP  -->
+		<div class="altered-modal modal fade" id="altered-default-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						Some content here
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn altered-btn-link" data-dismiss="modal">Close</button>
+						<button type="button" class="btn altered-btn">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="altered-modal modal fade" id="altered-modal-lg">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						Some content here
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn altered-btn-link" data-dismiss="modal">Close</button>
+						<button type="button" class="btn altered-btn">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="altered-modal modal fade" id="altered-modal-sm">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						Some content here
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn altered-btn-link" data-dismiss="modal">Close</button>
+						<button type="button" class="btn altered-btn">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--  END MODAL SPACE  -->
 		<div class="altered-header">
 			<div class="container">
 				<h1 class="altered-h1">Altered Styleguide - Bootstrap v4-Alpha</h1>
@@ -294,6 +353,25 @@
 					</form>
 				</div>
 			</div>
+			<div class="row altered-component-header">
+				<div class="col-sm-12">
+					<h2>Modals</h2>
+				</div>
+			</div>
+			<div class="row component-group">
+				<div class="col-sm-12">
+					<!-- Default modal trigger -->
+					<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-default-modal">
+						Default Modal Trigger
+					</button>
+					<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-modal-lg">
+						Large Modal Trigger
+					</button>
+					<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-modal-sm">
+						Small Modal Trigger
+					</button>
+				</div>
+			</div>
 		</div>
 		<div class="container">
 			<div class="row altered-component-header">
@@ -414,7 +492,6 @@
 				</div>
 			</div>
 		</div>
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="node_modules/tether/dist/js/tether.min.js"></script>
 		<script src="bootstrap-4.0.0-alpha/dist/js/bootstrap.min.js"></script>

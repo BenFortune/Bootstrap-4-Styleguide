@@ -1,0 +1,47 @@
+.altered-modal {
+    .modal-dialog {
+        &.modal-xl {
+            width: 994px;
+        }
+
+        &.modal-xxl {
+            width: 1202px;
+        }
+    }
+
+    .modal-content {
+        border-radius: 4px;
+    }
+
+    .modal-header {
+        padding: 15px 30px;
+        border-radius: 4px 4px 0 0;
+        background-color: #DDDDDD;
+
+        h4 {
+            font: italic 300 24px/1.5 $roboto-condensed;
+        }
+
+        .close {
+            margin-top: 8px;
+        }
+    }
+
+    .modal-body {
+        font-size: 16px;
+        padding: 30px;
+        background-color: #F5F5F5;
+    }
+
+    .modal-footer {
+        padding: 15px 30px;
+        border-top: none;
+    }
+
+    .close:focus {
+        outline: none;
+    }
+	.altered-btn-link {
+		background-color: #FFF;
+	}
+}

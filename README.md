@@ -5,6 +5,7 @@
 ####TO DO
 - Make fully responsive
 - Break main.js into modules
-- Get SVG Icons working
+- Get SVG icons working
 - Work on Select dropdowns
 - Get adding pills working
+- Fix overflow on alert banners
