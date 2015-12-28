@@ -72,6 +72,25 @@
 				</div>
 			</div>
 		</div>
+		<div class="altered-modal modal fade" id="altered-modal-jumbotron">
+			<div class="modal-dialog modal-jumbotron">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						Some content here
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn altered-btn-link" data-dismiss="modal">Close</button>
+						<button type="button" class="btn altered-btn">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!--  END MODAL SPACE  -->
 		<div class="altered-header">
 			<div class="container">
@@ -359,17 +378,27 @@
 				</div>
 			</div>
 			<div class="row component-group">
-				<div class="col-sm-12">
-					<!-- Default modal trigger -->
-					<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-default-modal">
-						Default Modal Trigger
-					</button>
-					<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-modal-lg">
-						Large Modal Trigger
-					</button>
-					<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-modal-sm">
-						Small Modal Trigger
-					</button>
+				<div class="col-sm-6">
+					<h3 class="group-header">Default Modals</h3>
+					<div class="btn-group-vertical">
+						<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-default-modal">
+							Default Modal Trigger
+						</button>
+						<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-modal-lg">
+							Large Modal Trigger
+						</button>
+						<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-modal-sm">
+							Small Modal Trigger
+						</button>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<h3 class="group-header">Jumbotron Modals</h3>
+					<div class="btn-group-vertical">
+						<button type="button" class="btn altered-btn" data-toggle="modal" data-target="#altered-modal-jumbotron">
+							Default Jumbotron Modal Trigger
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -4981,6 +4981,11 @@ input.float-label::-moz-placeholder {
 .altered-modal .modal-dialog.modal-xxl {
   width: 1202px; }
 
+.altered-modal .modal-dialog.modal-jumbotron .modal-header {
+  padding: 1rem;
+  background-color: #66CCFF;
+  color: #FFF; }
+
 .altered-modal .modal-content {
   border-radius: 4px; }
 
