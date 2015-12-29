@@ -4982,7 +4982,7 @@ input.float-label::-moz-placeholder {
   width: 1202px; }
 
 .altered-modal .modal-dialog.modal-jumbotron .modal-header {
-  padding: 1rem;
+  min-height: 200px;
   background-color: #66CCFF;
   color: #FFF; }
 
