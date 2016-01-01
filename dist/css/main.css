@@ -4586,7 +4586,10 @@ body {
     width: 100%;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
   .altered-navbar .navbar-brand {
-    padding: 11px 15px 11px 10px; }
+    height: 50px;
+    padding: 11px 15px 11px 10px;
+    line-height: 20px;
+    font-size: 18px; }
     .altered-navbar .navbar-brand img {
       display: block; }
     .altered-navbar .navbar-brand:hover {
@@ -4814,6 +4817,11 @@ body {
           padding: 20px; }
         .altered-navbar .altered-dropdown-banner .dropdown-menu li {
           width: 175px; } }
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0; } }
 
 .altered-btn,
 .altered-page .altered-btn {
@@ -5325,3 +5333,6 @@ input.float-label::-moz-placeholder {
 
 .altered-file-picker {
   margin-top: 1rem; }
+
+.altered-navbar {
+  margin-bottom: 40px; }
