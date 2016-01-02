@@ -14,8 +14,8 @@
 	}
 
 	.navbar-brand {
-		height: 50px;
-		padding: 11px 15px 11px 10px;
+		height: 55px;
+		padding: 17px 15px 15px 10px;
 		line-height: 20px;
 		font-size: 18px;
 
@@ -24,8 +24,21 @@
 		}
 
 		&:hover {
+			text-decoration: none;
 			background: $altered-dark-gray-90;
 		}
+	}
+
+	.nav-link {
+		padding: 15px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.navbar-nav .nav-item + .nav-item {
+		margin-left: 0;
 	}
 }
 
@@ -367,7 +380,7 @@
 		}
 	}
 
-	// BOOTSTRAP OVERRIDES 
+	// BOOTSTRAP OVERRIDES
 	&.navbar {
 		padding-top: 0;
 		padding-bottom: 0;

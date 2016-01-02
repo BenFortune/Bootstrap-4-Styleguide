@@ -4586,14 +4586,21 @@ body {
     width: 100%;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
   .altered-navbar .navbar-brand {
-    height: 50px;
-    padding: 11px 15px 11px 10px;
+    height: 55px;
+    padding: 17px 15px 15px 10px;
     line-height: 20px;
     font-size: 18px; }
     .altered-navbar .navbar-brand img {
       display: block; }
     .altered-navbar .navbar-brand:hover {
+      text-decoration: none;
       background: #4D4D4D; }
+  .altered-navbar .nav-link {
+    padding: 15px; }
+    .altered-navbar .nav-link:hover {
+      text-decoration: none; }
+  .altered-navbar .navbar-nav .nav-item + .nav-item {
+    margin-left: 0; }
 
 @media only screen and (max-width: 768px) {
   body.navbar-collapse-open {
