@@ -70,13 +70,13 @@
 			float: right;
 			margin: 8px 0;
 			padding: 4px 8px;
-			color: #FFFFFF;
+			color: #FFF;
 			border: 1px solid $altered-dark-gray;
 
 			&:hover,
 			&:active,
 			&:focus {
-			    text-decoration: none;
+				text-decoration: none;
 			}
 		}
 
@@ -107,7 +107,7 @@
 				line-height: 20px;
 				display: block;
 				padding: 10px 15px;
-				color: #FFFFFF !important;
+				color: #FFF !important;
 
 				[class^='icon-'],
 				[class*=' icon-'] {
@@ -135,7 +135,7 @@
 			padding: 15px 15px 5px 15px;
 			cursor: default;
 			text-transform: uppercase;
-			color: #FFFFFF !important;
+			color: #FFF !important;
 			background: none !important;
 
 			[class^='icon-'],
@@ -195,7 +195,7 @@
 				background: $altered-dark-gray-90;
 
 				&:hover {
-				    background: $altered-light-blue !important;
+					background: $altered-light-blue !important;
 				}
 			}
 		}
@@ -229,7 +229,7 @@
 			}
 
 			> a {
-				color: #FFFFFF;
+				color: #FFF;
 
 				&:hover {
 					background: $altered-dark-gray-90;
@@ -272,12 +272,12 @@
 
 			a {
 				padding: 5px 15px;
-				color: #FFFFFF;
+				color: #FFF;
 
 				&:hover,
 				&:active,
 				&:focus {
-					color: #FFFFFF;
+					color: #FFF;
 					background: $altered-dark-gray-90;
 				}
 
@@ -322,7 +322,7 @@
 				font-weight: bold;
 				line-height: 16px;
 				padding: 10px 15px 5px 15px;
-				color: #FFFFFF;
+				color: #FFF;
 			}
 		}
 

@@ -1,6 +1,7 @@
 .altered-float-label {
-	background: #FFFFFF;
+	background: #FFF;
 	border-radius: 2px;
+
 	label {
 		position: absolute;
 		margin: 10px 0 0 11px;
@@ -10,20 +11,25 @@
 		transition: all 0.2s ease-out;
 		z-index: 1;
 		pointer-events: none;
-	} input {
+	}
+
+	input {
 		z-index: 2;
 		position: relative;
 		background: transparent;
 		transition: padding 0.2s ease-out;
 	}
 }
+
 .altered-float-label-on {
+
 	label {
 		margin-top: 4px;
 		font-weight: normal;
 		font-size: 12px;
 		z-index: 3;
 	}
+
 	input {
 		padding-top: 17px !important;
 		padding-bottom: 3px !important;
@@ -31,38 +37,29 @@
 }
 
 
-label[float-label],
-label[data-float-label] {
+label[float-label], label[data-float-label] {
 	position: absolute;
 	margin: 15px 0 0 17px;
 	font-weight: normal;
 	font-size: 12px;
-	color: #b5b5b5;
+	color: #B5B5B5;
 	transition: all 0.3s ease-out;
-	-webkit-transition: all 0.3s ease-out;
 	opacity: 0;
 	visibility: hidden;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	pointer-events: none;
 	outline: 0;
 }
 
-.form-control-icon,
-label[float-label],
-label[data-float-label] {
-	cursor:text;
+.form-control-icon, label[float-label], label[data-float-label] {
+	cursor: text;
 }
 
-.has-icon label[float-label],
-.has-icon label[data-float-label] {
+.has-icon label[float-label], .has-icon label[data-float-label] {
 	margin-left: 33.5px;
 }
 
-label[float-label].float-label-on,
-label[data-float-label].float-label-on {
+label[float-label].float-label-on, label[data-float-label].float-label-on {
 	opacity: 1;
 	visibility: visible;
 	margin-top: 4px;
@@ -70,7 +67,6 @@ label[data-float-label].float-label-on {
 
 input {
 	transition: padding 0.3s ease-out;
-	-webkit-transition: padding 0.3s ease-out;
 }
 
 input.float-label {
@@ -78,14 +74,10 @@ input.float-label {
 	padding-bottom: 3px !important;
 }
 
-input.float-label::-webkit-input-placeholder {
-	color: transparent;
-}
-
-input.float-label:-moz-placeholder {
-	color: transparent;
-}
-
-input.float-label::-moz-placeholder {
-	color: transparent;
-}
+// input.float-label::-webkit-input-placeholder {
+// 	color: transparent;
+// }
+//
+// input.float-label:-moz-placeholder {
+// 	color: transparent;
+// }

@@ -1,6 +1,7 @@
 .altered-alert {
 	font-size: 16px;
-	color: #333333;
+	color: $altered-dark-gray;
+
 	.alert-success {
 		border-color: #DFF0D8;
 		background-color: #DFF0D8;
@@ -20,10 +21,12 @@
 		border-color: #E3F8FA;
 		background-color: #E3F8FA;
 	}
+
 	.altered-alert-banner {
 		margin-bottom: 0;
 		border-radius: 0;
 	}
+
 	.close:focus {
 		outline: none;
 	}
@@ -39,6 +42,7 @@
 		text-shadow: none;
 	}
 }
+
 .container-fluid.altered-alert {
 	padding-left: 0;
 	padding-right: 0;

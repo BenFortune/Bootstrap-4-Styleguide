@@ -15,8 +15,7 @@
 		font: italic 300 16px/1.5 $roboto-condensed;
 	}
 
-	h5,
-	h6 {
+	h5, h6 {
 		font: italic 300 14px/1.5 $roboto-condensed;
 		text-transform: uppercase;
 	}
@@ -39,7 +38,7 @@
 		font-size: 15px;
 		display: inline-block;
 		padding: 4px 8px;
-		color: #FFFFFF;
+		color: #FFF;
 		background: $altered-gray;
 	}
 }

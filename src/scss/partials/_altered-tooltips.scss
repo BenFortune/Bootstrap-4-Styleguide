@@ -1,21 +1,21 @@
 .altered-tooltip {
-    &.in {
-        opacity: 1;
-    }
+	&.in {
+		opacity: 1;
+	}
 
-    .tooltip-inner {
-        font-size: 16px;
-        padding: 10px 20px;
-        background: $altered-dark-gray;
-    }
+	.tooltip-inner {
+		font-size: 16px;
+		padding: 10px 20px;
+		background: $altered-dark-gray;
+	}
 
-    &.top {
-        padding: 10px 0;
+	&.top {
+		padding: 10px 0;
 
-        .tooltip-arrow {
-            margin-left: -10px;
-            border-width: 10px 10px 0;
-            border-top-color: $altered-dark-gray;
-        }
-    }
+		.tooltip-arrow {
+			margin-left: -10px;
+			border-width: 10px 10px 0;
+			border-top-color: $altered-dark-gray;
+		}
+	}
 }

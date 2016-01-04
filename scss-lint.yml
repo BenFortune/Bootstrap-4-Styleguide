@@ -48,7 +48,7 @@ linters:
 
   HexLength:
     enabled: true
-    style: long # or 'short'
+    style: short # or 'long'
 
   HexNotation:
     enabled: true
@@ -67,8 +67,8 @@ linters:
 
   Indentation:
     enabled: true
-    character: space # or 'tab'
-    width: 4
+    character: tab # or 'space'
+    width: 1
 
   LeadingZero:
     enabled: false
@@ -120,7 +120,7 @@ linters:
     allow_single_line_rule_sets: true
 
   SingleLinePerSelector:
-    enabled: true
+    enabled: false
 
   SpaceAfterComma:
     enabled: true
