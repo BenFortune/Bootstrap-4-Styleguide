@@ -1,3 +1,5 @@
+// Original NON ES6 Gulpfile -- Not used, but kept for reference
+
 const gulp = require('gulp');
 const gSass = require('gulp-sass');
 const gScssLint = require('gulp-scss-lint');
