@@ -15,20 +15,20 @@ const jsPaths = {
 	dest: './build/js'
 }
 
-gulp.task('sass', function () {
+gulp.task('sass', () => {
 	return gulp.src(sassPaths.src)
 	.pipe(gSass())
 	.pipe(gulp.dest(sasPaths.dest));
 });
 
-gulp.task('scss-lint', function() {
+gulp.task('scss-lint', () => {
 	return gulp.src(sassPaths.src)
 	.pipe(gScssLint({
 		'config': 'scss-lint.yml',
 	}));
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', () => {
 	return gulp.src(sassPaths.src)
 	.pipe(gScssLint({
 		'config': 'scss-lint.yml',
@@ -37,7 +37,7 @@ gulp.task('styles', function() {
 	.pipe(gulp.dest(sassPaths.dest));
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', () => {
 	return gulp.src(jsPaths.src)
 	.pipe(gConcat('scripts.js'))
 	.pipe(gulp.dest(jsPaths.dest));
