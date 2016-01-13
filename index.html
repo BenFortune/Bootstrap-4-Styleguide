@@ -439,9 +439,17 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Sign In/Register</a>
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action</a>
-								<a class="dropdown-item" href="#">Another action</a>
-								<a class="dropdown-item" href="#">Something else here</a>
+								<form class="altered-form">
+									<div class="form-group float-label">
+										<label for="email" data-float-label>Email</label>
+										<input type="email" class="form-control" placeholder="Email">
+									</div>
+									<div class="form-group float-label">
+										<label for="password" data-float-label>Password</label>
+										<input type="password" class="form-control" placeholder="Password">
+									</div>
+									<button class="btn altered-btn" type="submit">Sign In</button>
+								</form>
 							</div>
 						</li>
 					</ul>
