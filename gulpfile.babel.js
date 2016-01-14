@@ -18,7 +18,7 @@ const jsPaths = {
 gulp.task('sass', () => {
 	return gulp.src(sassPaths.src)
 	.pipe(gSass())
-	.pipe(gulp.dest(sasPaths.dest));
+	.pipe(gulp.dest(sassPaths.dest));
 });
 
 gulp.task('scss-lint', () => {

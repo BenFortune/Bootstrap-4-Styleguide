@@ -4595,6 +4595,23 @@ body {
       text-decoration: none; }
   .altered-navbar .navbar-nav .nav-item + .nav-item {
     margin-left: 0; }
+  .altered-navbar .dropdown-menu {
+    min-width: 250px;
+    left: inherit;
+    right: 0;
+    margin-top: 0;
+    color: #F5F5F5;
+    background-color: #333;
+    border-radius: 0 0 .25rem .25rem; }
+    .altered-navbar .dropdown-menu h4 {
+      margin-top: .5rem;
+      margin-left: .75rem;
+      margin-right: .75rem;
+      font-size: 1.5rem; }
+    .altered-navbar .dropdown-menu .altered-form {
+      margin-bottom: .75rem;
+      margin-left: .75rem;
+      margin-right: .75rem; }
 
 @media only screen and (max-width: 768px) {
   body.navbar-collapse-open {

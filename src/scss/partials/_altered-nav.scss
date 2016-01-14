@@ -40,6 +40,29 @@
 	.navbar-nav .nav-item + .nav-item {
 		margin-left: 0;
 	}
+
+	.dropdown-menu {
+		min-width: 250px;
+		left: inherit;
+		right: 0;
+		margin-top: 0;
+		color: $altered-light-gray;
+		background-color: $altered-dark-gray;
+		border-radius: 0 0 .25rem .25rem;
+
+		h4 {
+			margin-top: .5rem;
+			margin-left: .75rem;
+			margin-right: .75rem;
+			font-size: 1.5rem;
+		}
+
+		.altered-form {
+			margin-bottom: .75rem;
+			margin-left: .75rem;
+			margin-right: .75rem;
+		}
+	}
 }
 
 // mobile
