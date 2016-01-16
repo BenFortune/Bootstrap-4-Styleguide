@@ -43,8 +43,6 @@
 
 	.dropdown-menu {
 		min-width: 250px;
-		left: inherit;
-		right: 0;
 		margin-top: 0;
 		color: $altered-light-gray;
 		background-color: $altered-dark-gray;
@@ -271,18 +269,6 @@
 
 				> a {
 					background: none !important;
-
-					&:after {
-						position: absolute;
-						right: 9px;
-						bottom: 0;
-						width: 0;
-						height: 0;
-						content: '';
-						border-right: 10px solid transparent;
-						border-bottom: 10px solid $altered-gray;
-						border-left: 10px solid transparent;
-					}
 				}
 			}
 		}

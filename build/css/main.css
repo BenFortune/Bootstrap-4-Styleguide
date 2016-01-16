@@ -4597,8 +4597,6 @@ body {
     margin-left: 0; }
   .altered-navbar .dropdown-menu {
     min-width: 250px;
-    left: inherit;
-    right: 0;
     margin-top: 0;
     color: #F5F5F5;
     background-color: #333;
@@ -4754,16 +4752,6 @@ body {
       display: inline-block; }
     .altered-navbar .navbar-nav > li.open > a {
       background: none !important; }
-      .altered-navbar .navbar-nav > li.open > a:after {
-        position: absolute;
-        right: 9px;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        content: '';
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid #999;
-        border-left: 10px solid transparent; }
     .altered-navbar .navbar-collapse .dropdown-menu {
       border: none;
       border-color: #999;
