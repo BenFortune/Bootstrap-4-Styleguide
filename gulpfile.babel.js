@@ -6,46 +6,47 @@ import gScssLint from 'gulp-scss-lint';
 import gConcat from 'gulp-concat';
 import gAutoPrefixer from 'gulp-autoprefixer';
 
-const sassPaths = {
-	src: './src/scss/**/*.scss',
-	dest: './build/css'
-}
-
-const jsPaths = {
-	src: './src/js/*.js',
-	dest: './build/js'
-}
-
-const autoPrefxConfig = {
-	browsers: ['last 2 versions'],
-	cascade: false
+const gulpConfig = {
+	sassPaths: {
+		src: './src/scss/**/*.scss',
+		dest: './build/css'
+	},
+	jsPaths: {
+		src: './src/js/*.js',
+		dest: './build/js'
+	},
+	scssLint: {
+		'config': 'scss-lint.yml',
+	},
+	autoPrefxConfig: {
+		browsers: ['last 2 versions'],
+		cascade: false
+	}
 }
 
 gulp.task('sass', () => {
-	return gulp.src(sassPaths.src)
+	return gulp.src(gulpConfig.sassPaths.src)
 	.pipe(gSass())
-	.pipe(gulp.dest(sassPaths.dest));
+	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
 });
 
 gulp.task('scss-lint', () => {
-	return gulp.src(sassPaths.src)
-	.pipe(gScssLint({
-		'config': 'scss-lint.yml',
-	}));
+	return gulp.src(gulpConfig.sassPaths.src)
+	.pipe(gScssLint(gulpConfig.scssLint));
 });
 
 gulp.task('styles', () => {
-	return gulp.src(sassPaths.src)
-	.pipe(gScssLint({
-		'config': 'scss-lint.yml',
-	}))
+	return gulp.src(gulpConfig.sassPaths.src)
+	.pipe(gScssLint(gulpConfig.scssLint))
 	.pipe(gSass())
-	.pipe(gAutoPrefixer(autoPrefxConfig))
-	.pipe(gulp.dest(sassPaths.dest));
+	.pipe(gAutoPrefixer(gulpConfig.autoPrefxConfig))
+	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
 });
 
 gulp.task('scripts', () => {
-	return gulp.src(jsPaths.src)
+	return gulp.src(gulpConfig.jsPaths.src)
 	.pipe(gConcat('scripts.js'))
-	.pipe(gulp.dest(jsPaths.dest));
+	.pipe(gulp.dest(gulpConfig.jsPaths.dest));
 });
+
+gulp.task('default', ['styles', 'scripts']);
