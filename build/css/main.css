@@ -4706,6 +4706,9 @@ body {
         font-size: 20px;
         line-height: 1;
         margin-right: 8px; }
+    .altered-navbar .navbar-nav .nav-item {
+      display: block;
+      float: none; }
   .altered-navbar .dropdown,
   .altered-navbar .altered-multi-column-col {
     padding: 0;

@@ -60,6 +60,7 @@
 			margin-left: .75rem;
 			margin-right: .75rem;
 		}
+
 	}
 
 	.navbar-toggler {
@@ -141,6 +142,11 @@
 					line-height: 1;
 					margin-right: 8px;
 				}
+			}
+
+			.nav-item {
+				display:block;
+				float:none;
 			}
 		}
 
