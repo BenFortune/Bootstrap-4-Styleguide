@@ -135,3 +135,18 @@
 .altered-navbar {
 	margin-bottom: 40px;
 }
+
+#altered-mobile-nav {
+
+	#collapseGroup {
+		clear: both;
+	}
+	
+	.navbar-nav {
+		.nav-item {
+			display: block;
+			float: none;
+		}
+	}
+
+}

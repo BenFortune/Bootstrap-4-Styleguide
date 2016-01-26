@@ -5362,3 +5362,10 @@ input.float-label {
 
 .altered-navbar {
   margin-bottom: 40px; }
+
+#altered-mobile-nav #collapseGroup {
+  clear: both; }
+
+#altered-mobile-nav .navbar-nav .nav-item {
+  display: block;
+  float: none; }
