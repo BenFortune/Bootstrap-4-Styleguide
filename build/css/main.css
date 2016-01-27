@@ -4527,6 +4527,15 @@ a.bg-danger:focus, a.bg-danger:hover {
 .altered-margin-bottom-none {
   margin-bottom: 0 !important; }
 
+.altered-show-block {
+  display: block; }
+
+.altered-show-inline {
+  display: inline; }
+
+.altered-hide {
+  display: none !important; }
+
 .altered-page h1, .altered-alert h1, .grid-demo h1, .altered-modal .modal-body h1, .altered-component-header h1 {
   font: italic 300 32px/1.5 "Roboto Condensed", sans-serif; }
 

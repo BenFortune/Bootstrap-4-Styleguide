@@ -10418,4 +10418,20 @@ $(document).ready(function() {
 	}());
 	// END FORM GROUP BUTTON CHANGE
 
+	//ALERT CLOSE
+	var alertEls = $('.altered-alert');
+		alertEls.addClass('altered-show-block');
+	var closeAlertEls = $('.altered-alert .close');
+
+	closeAlertEls.on('click', function(e) {
+		var targetEl = $(e.target);
+		if (targetEl.hasClass('altered-show-block')) {
+			targetEl.removeClass('altered-show-block');
+			targetEl.addClass('altered-hide');
+		} else {
+			targetEl.removeClass('altered-hide');
+			targetEl.addClass('altered-show-block;');
+		}
+	});
+
 });
