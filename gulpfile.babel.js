@@ -5,6 +5,7 @@ import gSass from 'gulp-sass';
 import gScssLint from 'gulp-scss-lint';
 import gConcat from 'gulp-concat';
 import gAutoPrefixer from 'gulp-autoprefixer';
+import gCssMinify from 'gulp-cssnano';
 
 const gulpConfig = {
 	sassPaths: {
@@ -40,6 +41,7 @@ gulp.task('styles', () => {
 	.pipe(gScssLint(gulpConfig.scssLint))
 	.pipe(gSass())
 	.pipe(gAutoPrefixer(gulpConfig.autoPrefxConfig))
+	.pipe(gCssMinify())
 	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
 });
 
