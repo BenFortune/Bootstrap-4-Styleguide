@@ -34,7 +34,7 @@ $(document).ready(function() {
 	}
 	// END Float Label
 
-	// BEGIN Toggle
+	// BEGIN Toggle Switch
 	var diceToggle = $('.altered-toggle-control');
 	var diceToggleLabel = $('.altered-toggle-label');
 	diceToggle.addClass('on');
@@ -49,9 +49,9 @@ $(document).ready(function() {
 			diceToggleLabel.text('On');
 		}
 	});
-	// END Toggle
+	// END Toggle Switch
 
-	// FORM GROUP BUTTON CHANGE
+	// Form Group Button Change
 	(function formBtnGroupChange() {
 		var channelBtn = $('.altered-btn-group-tab button');
 
@@ -64,9 +64,38 @@ $(document).ready(function() {
 			}
 		});
 	}());
-	// END FORM GROUP BUTTON CHANGE
+	// End Form Group Button Change
 
-	//ALERT CLOSE
+	// Select DD & Multi-select DD
+	var ddTrigger = $('.altered-select button');
+
+	ddTrigger.on('click', function() {
+		var that = this;
+		getSelectType.call(that);
+	});
+
+	function getSelectType(button) {
+		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
+			var that = this;
+			var clickableElements = $('.altered-select .dropdown-menu a');
+
+			if ($(this).hasClass('dropdown-toggle')) {
+				var btnText = $(this).prev();
+				clickableElements.on('click', function(e) {
+					e.preventDefault();
+					btnText.text(this.innerHTML);
+				});
+			} else {
+				clickableElements.on('click', function(e) {
+					e.preventDefault();
+					that.innerHTML = this.innerHTML;
+				});
+			}
+		}
+	};
+	// End Select DD & Multi-select DD
+
+	// Alert Close
 	var alertEls = $('.altered-alert');
 		alertEls.addClass('altered-show-block');
 	var closeAlertEls = $('.altered-alert .close');
@@ -81,5 +110,5 @@ $(document).ready(function() {
 			targetEl.addClass('altered-show-block;');
 		}
 	});
-
+	// End Alert Close
 });
