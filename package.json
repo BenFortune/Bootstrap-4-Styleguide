@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-4-styleguide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Style Guide Built Using Bootstrap Version 4",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,10 +17,12 @@
     "babel-preset-es2015": "^6.3.13",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.0",
     "gulp-sass": "^2.0.4",
     "gulp-scss-lint": "^0.3.8",
+    "run-sequence": "^1.1.5",
     "tether": "^1.1.0"
   }
 }

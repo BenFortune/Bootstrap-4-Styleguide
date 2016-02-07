@@ -6,6 +6,8 @@ import gScssLint from 'gulp-scss-lint';
 import gConcat from 'gulp-concat';
 import gAutoPrefixer from 'gulp-autoprefixer';
 import gCssMinify from 'gulp-cssnano';
+import gBabel from 'gulp-babel';
+import gRunSequence from 'run-sequence';
 
 const gulpConfig = {
 	sassPaths: {
@@ -47,8 +49,11 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
 	return gulp.src(gulpConfig.jsPaths.src)
+	// .pipe(gBabel())
 	.pipe(gConcat('scripts.js'))
 	.pipe(gulp.dest(gulpConfig.jsPaths.dest));
 });
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('default', (done) => {
+	gRunSequence('styles', 'scripts', done);
+});
