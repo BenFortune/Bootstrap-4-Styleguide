@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-	var mySlider = $("#slider").slider();
+	const mySlider = $("#slider").slider();
 		mySlider.slider('setValue', 8);
 
 	// Initialize Tooltip
-	$(function () {
+	$(() => {
 		$('[data-toggle="tooltip"]').tooltip()
 	});
 
@@ -35,8 +35,8 @@ $(document).ready(function() {
 	// END Float Label
 
 	// BEGIN Toggle Switch
-	var diceToggle = $('.altered-toggle-control');
-	var diceToggleLabel = $('.altered-toggle-label');
+	const diceToggle = $('.altered-toggle-control');
+	const diceToggleLabel = $('.altered-toggle-label');
 	diceToggle.addClass('on');
 
 	// Click event
@@ -52,18 +52,16 @@ $(document).ready(function() {
 	// END Toggle Switch
 
 	// Form Group Button Change
-	(function formBtnGroupChange() {
-		var channelBtn = $('.altered-btn-group-tab button');
+	const channelBtn = $('.altered-btn-group-tab button');
 
-		channelBtn.on('click', function(e) {
-			var that = $(this);
-			e.preventDefault();
-			if (that.hasClass('inactive')) {
-				channelBtn.removeClass('active').addClass('inactive');
-				that.removeClass('inactive').addClass('active');
-			}
-		});
-	}());
+	channelBtn.on('click', function(e) {
+		const that = $(this);
+		e.preventDefault();
+		if (that.hasClass('inactive')) {
+			channelBtn.removeClass('active').addClass('inactive');
+			that.removeClass('inactive').addClass('active');
+		}
+	});
 	// End Form Group Button Change
 
 	// Select DD & Multi-select DD

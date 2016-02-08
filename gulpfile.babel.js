@@ -49,7 +49,7 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
 	return gulp.src(gulpConfig.jsPaths.src)
-	// .pipe(gBabel())
+	.pipe(gBabel())
 	.pipe(gConcat('scripts.js'))
 	.pipe(gulp.dest(gulpConfig.jsPaths.dest));
 });
