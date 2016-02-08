@@ -1,7 +1,6 @@
 'use strict';
 
 $(document).ready(function () {
-	var _this = this;
 
 	var mySlider = $("#slider").slider();
 	mySlider.slider('setValue', 8);
@@ -44,12 +43,11 @@ $(document).ready(function () {
 
 	// Click event
 	diceToggle.on('click', function () {
-		console.log('toggle clicked');
-		if ($(_this).hasClass('on')) {
-			$(_this).removeClass('on').addClass('off');
+		if ($(this).hasClass('on')) {
+			$(this).removeClass('on').addClass('off');
 			diceToggleLabel.text('Off');
 		} else {
-			$(_this).removeClass('off').addClass('on');
+			$(this).removeClass('off').addClass('on');
 			diceToggleLabel.text('On');
 		}
 	});
@@ -77,22 +75,29 @@ $(document).ready(function () {
 	});
 
 	function getSelectType(button) {
-		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
-			var that = this;
-			var clickableElements = $('.altered-select .dropdown-menu a');
+		var _this = this;
 
-			if ($(this).hasClass('dropdown-toggle')) {
-				var btnText = $(this).prev();
-				clickableElements.on('click', function (e) {
-					e.preventDefault();
-					btnText.text(this.innerHTML);
-				});
-			} else {
-				clickableElements.on('click', function (e) {
-					e.preventDefault();
-					that.innerHTML = this.innerHTML;
-				});
-			}
+		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
+			var btnText;
+
+			(function () {
+				var that = _this;
+				var clickableElements = $('.altered-select .dropdown-menu a');
+
+				if ($(_this).hasClass('dropdown-toggle')) {
+					btnText = $(_this).prev();
+
+					clickableElements.on('click', function (e) {
+						e.preventDefault();
+						btnText.text(this.innerHTML);
+					});
+				} else {
+					clickableElements.on('click', function (e) {
+						e.preventDefault();
+						that.innerHTML = this.innerHTML;
+					});
+				}
+			})();
 		}
 	};
 	// End Select DD & Multi-select DD

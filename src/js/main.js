@@ -65,17 +65,17 @@ $(document).ready(function() {
 	// End Form Group Button Change
 
 	// Select DD & Multi-select DD
-	var ddTrigger = $('.altered-select button');
+	const ddTrigger = $('.altered-select button');
 
 	ddTrigger.on('click', function() {
-		var that = this;
+		const that = this;
 		getSelectType.call(that);
 	});
 
 	function getSelectType(button) {
 		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
-			var that = this;
-			var clickableElements = $('.altered-select .dropdown-menu a');
+			const that = this;
+			const clickableElements = $('.altered-select .dropdown-menu a');
 
 			if ($(this).hasClass('dropdown-toggle')) {
 				var btnText = $(this).prev();
@@ -94,12 +94,12 @@ $(document).ready(function() {
 	// End Select DD & Multi-select DD
 
 	// Alert Close
-	var alertEls = $('.altered-alert');
-		alertEls.addClass('altered-show-block');
-	var closeAlertEls = $('.altered-alert .close');
+	const alertEls = $('.altered-alert');
+		  alertEls.addClass('altered-show-block');
+	const closeAlertEls = $('.altered-alert .close');
 
 	closeAlertEls.on('click', function(e) {
-		var targetEl = $(e.target);
+		const targetEl = $(e.target);
 		if (targetEl.hasClass('altered-show-block')) {
 			targetEl.removeClass('altered-show-block');
 			targetEl.addClass('altered-hide');
