@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(() => {
 
 	const mySlider = $("#slider").slider();
-		mySlider.slider('setValue', 8);
+		  mySlider.slider('setValue', 8);
 
 	// Initialize Tooltip
 	$(() => {
@@ -9,9 +9,9 @@ $(document).ready(function() {
 	});
 
 	// BEGIN Float Label
-	var floatInput = $('.float-label input');
-	var onClass = "float-label-on";
-	var showClass = "float-label";
+	const floatInput = $('.float-label input');
+	const onClass = "float-label-on";
+	const showClass = "float-label";
 
 	floatInput.on('focus', function(e) {
 		floatLabelHandler.call(e.target);

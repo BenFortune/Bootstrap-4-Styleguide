@@ -1,6 +1,6 @@
 'use strict';
 
-$(document).ready(function () {
+$(function () {
 
 	var mySlider = $("#slider").slider();
 	mySlider.slider('setValue', 8);
