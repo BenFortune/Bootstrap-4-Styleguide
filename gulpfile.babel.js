@@ -6,6 +6,7 @@ import gScssLint from 'gulp-scss-lint';
 import gConcat from 'gulp-concat';
 import gAutoPrefixer from 'gulp-autoprefixer';
 import gCssMinify from 'gulp-cssnano';
+import gEsLint from 'gulp-eslint';
 import gBabel from 'gulp-babel';
 import gRunSequence from 'run-sequence';
 
@@ -24,6 +25,12 @@ const gulpConfig = {
 	autoPrefxConfig: {
 		browsers: ['last 2 versions'],
 		cascade: false
+	},
+	esLintConfig: {
+		'rules': {
+			'quotes': [1, 'single'],
+			'semi': [1, 'always']
+		}
 	}
 }
 
@@ -45,6 +52,18 @@ gulp.task('styles', () => {
 	.pipe(gAutoPrefixer(gulpConfig.autoPrefxConfig))
 	.pipe(gCssMinify())
 	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
+});
+
+gulp.task('lint', function() {
+  return gulp.src('./src/js/*.js').pipe(gEsLint({
+    'rules':{
+        'quotes': [1, 'single'],
+        'semi': [1, 'always']
+    }
+  }))
+  .pipe(gEsLint.format())
+  // Brick on failure to be super strict
+  .pipe(gEsLint.failOnError());
 });
 
 gulp.task('scripts', () => {
