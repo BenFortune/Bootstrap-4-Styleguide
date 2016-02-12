@@ -55,12 +55,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('lint', function() {
-  return gulp.src('./src/js/*.js').pipe(gEsLint({
-    'rules':{
-        'quotes': [1, 'single'],
-        'semi': [1, 'always']
-    }
-  }))
+  return gulp.src('./src/js/*.js').pipe(gEsLint())
   .pipe(gEsLint.format())
   // Brick on failure to be super strict
   .pipe(gEsLint.failOnError());

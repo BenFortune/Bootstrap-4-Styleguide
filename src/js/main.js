@@ -1,12 +1,10 @@
-$(() => {
+$(() => ({
 
-	const mySlider = $("#slider").slider();
-		  mySlider.slider('setValue', 8);
+  const mySlider = $('#slider').slider();
+    mySlider.slider('setValue', 8);
 
 	// Initialize Tooltip
-	$(() => {
-		$('[data-toggle="tooltip"]').tooltip()
-	});
+	$('[data-toggle="tooltip"]').tooltip();
 
 	// BEGIN Float Label
 	const floatInput = $('.float-label input');
@@ -109,4 +107,4 @@ $(() => {
 		}
 	});
 	// End Alert Close
-});
+}));
