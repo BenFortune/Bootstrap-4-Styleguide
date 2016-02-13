@@ -2,18 +2,16 @@
 
 $(function () {
 
-	var mySlider = $("#slider").slider();
+	var mySlider = $('#slider').slider();
 	mySlider.slider('setValue', 8);
 
 	// Initialize Tooltip
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
+	$('[data-toggle="tooltip"]').tooltip();
 
 	// BEGIN Float Label
 	var floatInput = $('.float-label input');
-	var onClass = "float-label-on";
-	var showClass = "float-label";
+	var onClass = 'float-label-on';
+	var showClass = 'float-label';
 
 	floatInput.on('focus', function (e) {
 		floatLabelHandler.call(e.target);
@@ -26,7 +24,7 @@ $(function () {
 	});
 
 	function floatLabelHandler() {
-		if (!this.value || this.value === "") {
+		if (!this.value || this.value === '') {
 			$(this).removeClass(showClass);
 			$(this).prev().removeClass(onClass);
 		} else {
@@ -74,7 +72,7 @@ $(function () {
 		getSelectType.call(that);
 	});
 
-	function getSelectType(button) {
+	function getSelectType() {
 		var _this = this;
 
 		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
@@ -99,7 +97,7 @@ $(function () {
 				}
 			})();
 		}
-	};
+	}
 	// End Select DD & Multi-select DD
 
 	// Alert Close

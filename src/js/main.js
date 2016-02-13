@@ -1,15 +1,15 @@
-$(() => ({
+$(() => {
 
-  const mySlider = $('#slider').slider();
-    mySlider.slider('setValue', 8);
+	const mySlider = $('#slider').slider();
+	mySlider.slider('setValue', 8);
 
 	// Initialize Tooltip
 	$('[data-toggle="tooltip"]').tooltip();
 
 	// BEGIN Float Label
 	const floatInput = $('.float-label input');
-	const onClass = "float-label-on";
-	const showClass = "float-label";
+	const onClass = 'float-label-on';
+	const showClass = 'float-label';
 
 	floatInput.on('focus', function(e) {
 		floatLabelHandler.call(e.target);
@@ -22,7 +22,7 @@ $(() => ({
 	});
 
 	function floatLabelHandler() {
-		if (!this.value || this.value === "") {
+		if (!this.value || this.value === '') {
 			$(this).removeClass(showClass);
 			$(this).prev().removeClass(onClass);
 		} else {
@@ -70,7 +70,7 @@ $(() => ({
 		getSelectType.call(that);
 	});
 
-	function getSelectType(button) {
+	function getSelectType() {
 		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
 			const that = this;
 			const clickableElements = $('.altered-select .dropdown-menu a');
@@ -88,12 +88,12 @@ $(() => ({
 				});
 			}
 		}
-	};
+	}
 	// End Select DD & Multi-select DD
 
 	// Alert Close
 	const alertEls = $('.altered-alert');
-		  alertEls.addClass('altered-show-block');
+	alertEls.addClass('altered-show-block');
 	const closeAlertEls = $('.altered-alert .close');
 
 	closeAlertEls.on('click', function(e) {
@@ -107,4 +107,4 @@ $(() => ({
 		}
 	});
 	// End Alert Close
-}));
+});
