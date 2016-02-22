@@ -91,6 +91,58 @@ $(() => {
 	}
 	// End Select DD & Multi-select DD
 
+	// REMOVE/HIDE TAGS
+	const pills = $('.altered-pill');
+	pills.on('click', function(e) {
+		const srcEl = $(e.target);
+		if ($(this).hasClass('add')) {
+			return;
+		} else {
+			srcEl.parent().addClass('remove');
+			// addNewTag($(this).parent());
+		}
+	});
+
+	// ADD TAGS
+	// (function addTags() {
+	// 	var tags = $('.dice-tag.add');
+	// 	var inputs = $('.dice-tag.add input');
+	// 	tags.on('click', function() {
+	// 		$(this).find('.remove').removeClass('remove').focus();
+	// 	});
+	// 	inputs.on('blur', function() {
+	// 		var value = $(this).val();
+	// 		if (value) {
+	// 			var parentEl = $(this).parent().parent();
+	// 			$(this).parent().text(value).removeClass('add').append('<span>X</span>');
+	// 			addNewTag(parentEl);
+	// 			addTags();
+	// 		} else {
+	// 			return;
+	// 		}
+	// 	});
+	// }());
+
+	// ADDING NEW TAGS
+	// function addNewTag(tagInput) {
+	// 	var targetEl = $(tagInput).children().last();
+	// 	if ($(targetEl).hasClass('add')) {
+	// 		return;
+	// 	} else {
+	// 		var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>'
+	// 		$(tagInput).append(addTagMarkup);
+	// 	}
+	// };
+	//
+	// (function addNewInput() {
+	// 	var inputGroup = $('.dice-input-group');
+	// 	var addBtn = $('.dice-input-add');
+	// 	addBtn.on('click', function() {
+	// 		inputGroup.append('<label for="checkbox1" class="checkbox-container"><input class="bootstrap-checkbox" type="checkbox" checked><span class="dice-checkbox icon-check-1"></span>Check me</label>');
+	// 		checkboxCheck();
+	// 	});
+	// }());
+
 	// Alert Close
 	const alertEls = $('.altered-alert');
 	alertEls.addClass('altered-show-block');

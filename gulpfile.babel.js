@@ -25,12 +25,6 @@ const gulpConfig = {
 	autoPrefxConfig: {
 		browsers: ['last 2 versions'],
 		cascade: false
-	},
-	esLintConfig: {
-		'rules': {
-			'quotes': [1, 'single'],
-			'semi': [1, 'always']
-		}
 	}
 }
 
@@ -57,8 +51,7 @@ gulp.task('styles', () => {
 gulp.task('lint', function() {
   return gulp.src('./src/js/*.js').pipe(gEsLint())
   .pipe(gEsLint.format())
-  // Brick on failure to be super strict
-  .pipe(gEsLint.failOnError());
+  // .pipe(gEsLint.failOnError());
 });
 
 gulp.task('scripts', () => {
@@ -69,5 +62,5 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('default', (done) => {
-	gRunSequence('styles', 'scripts', done);
+	gRunSequence('styles', 'lint', 'scripts', done);
 });

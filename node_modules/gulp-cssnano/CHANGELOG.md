@@ -1,3 +1,7 @@
+# 2.1.1
+
+* Added more keywords for easier discovery on npm.
+
 # 2.1.0
 
 * Print a CssSyntaxError when the input CSS could not be parsed properly with
