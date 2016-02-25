@@ -96,67 +96,68 @@ $(() => {
 	pills.on('click', function(e) {
 		const srcEl = $(e.target);
 		if ($(this).hasClass('add')) {
+			console.log('it has the add class');
 			return;
 		} else {
+			console.log('source el parent adds class remove pill');
 			srcEl.parent().addClass('remove');
-			// addNewTag($(this).parent());
+			addNewTag($(this).parent());
 		}
 	});
 
 	// ADD TAGS
-	// (function addTags() {
-	// 	var tags = $('.dice-tag.add');
-	// 	var inputs = $('.dice-tag.add input');
-	// 	tags.on('click', function() {
-	// 		$(this).find('.remove').removeClass('remove').focus();
-	// 	});
-	// 	inputs.on('blur', function() {
-	// 		var value = $(this).val();
-	// 		if (value) {
-	// 			var parentEl = $(this).parent().parent();
-	// 			$(this).parent().text(value).removeClass('add').append('<span>X</span>');
-	// 			addNewTag(parentEl);
-	// 			addTags();
-	// 		} else {
-	// 			return;
-	// 		}
-	// 	});
-	// }());
+	const tags = $('.altered-pill.add');
+	const inputs = $('.altered-pill.add input');
+	tags.on('click', function() {
+		$(this).find('.remove').removeClass('remove').focus();
+	});
+	inputs.on('blur', function() {
+		var value = $(this).val();
+		if (value) {
+			console.log('legit value');
+			// var parentEl = $(this).parent().parent();
+			// $(this).parent().text(value).removeClass('add').append('<span>X</span>');
+			// addNewTag(parentEl);
+			// addTags();
+		} else {
+			return;
+		}
+	});
 
 	// ADDING NEW TAGS
-	// function addNewTag(tagInput) {
-	// 	var targetEl = $(tagInput).children().last();
-	// 	if ($(targetEl).hasClass('add')) {
-	// 		return;
-	// 	} else {
-	// 		var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>'
-	// 		$(tagInput).append(addTagMarkup);
-	// 	}
-	// };
-	//
-	// (function addNewInput() {
+	function addNewTag(tagInput) {
+		var targetEl = $(tagInput).children().last();
+		if ($(targetEl).hasClass('add')) {
+			return;
+		} else {
+			var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>';
+			$(tagInput).append(addTagMarkup);
+		}
+	}
+
+	// function addNewInput() {
 	// 	var inputGroup = $('.dice-input-group');
 	// 	var addBtn = $('.dice-input-add');
 	// 	addBtn.on('click', function() {
 	// 		inputGroup.append('<label for="checkbox1" class="checkbox-container"><input class="bootstrap-checkbox" type="checkbox" checked><span class="dice-checkbox icon-check-1"></span>Check me</label>');
 	// 		checkboxCheck();
 	// 	});
-	// }());
+	// };
 
 	// Alert Close
-	const alertEls = $('.altered-alert');
-	alertEls.addClass('altered-show-block');
-	const closeAlertEls = $('.altered-alert .close');
-
-	closeAlertEls.on('click', function(e) {
-		const targetEl = $(e.target);
-		if (targetEl.hasClass('altered-show-block')) {
-			targetEl.removeClass('altered-show-block');
-			targetEl.addClass('altered-hide');
-		} else {
-			targetEl.removeClass('altered-hide');
-			targetEl.addClass('altered-show-block;');
-		}
-	});
+	// const alertEls = $('.altered-alert');
+	// alertEls.addClass('altered-show-block');
+	// const closeAlertEls = $('.altered-alert .close');
+	//
+	// closeAlertEls.on('click', function(e) {
+	// 	const targetEl = $(e.target);
+	// 	if (targetEl.hasClass('altered-show-block')) {
+	// 		targetEl.removeClass('altered-show-block');
+	// 		targetEl.addClass('altered-hide');
+	// 	} else {
+	// 		targetEl.removeClass('altered-hide');
+	// 		targetEl.addClass('altered-show-block;');
+	// 	}
+	// });
 	// End Alert Close
 });

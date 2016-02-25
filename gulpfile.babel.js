@@ -51,7 +51,7 @@ gulp.task('styles', () => {
 gulp.task('lint', function() {
   return gulp.src('./src/js/*.js').pipe(gEsLint())
   .pipe(gEsLint.format())
-  // .pipe(gEsLint.failOnError());
+  .pipe(gEsLint.failOnError());
 });
 
 gulp.task('scripts', () => {

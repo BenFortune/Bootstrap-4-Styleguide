@@ -1,7 +1,6 @@
 .altered-pill {
 	display: inline-block;
 	position: relative;
-	margin-bottom: 5px;
 	padding: 5px 15px;
 	line-height: 1;
 	background: #FFF;
@@ -11,23 +10,52 @@
 	span {
 		display: inline-block;
 		margin-left: 3px;
-		padding: 0 5px 3px;
+		padding: 3px 5px 1px 5px;
 		color: #FFF;
 		font-size: 13px;
 		font-weight: 300;
 		line-height: 1;
-		vertical-align: top;
 		cursor: pointer;
 		background-color: #CCC;
 		border-radius: 8px;
-
+		
 		&:hover, &:focus, &:active {
-			background-color: #E5E5E5;
+			background-color: $altered-gray-90;
 		}
 	}
 
 	&.add {
 		margin-left: 0;
+		color: $altered-blue;
+		line-height: 1;
+		border-color: $altered-blue;
 		padding-left: 10px;
+		cursor: pointer;
+
+		&:hover, &:focus, &:active {
+			border-color: $altered-light-blue;
+		}
+
+		span {
+			margin-left: 0;
+			margin-right: 3px;
+			color: $altered-blue;
+			background-color: #FFF;
+			border: 1px solid $altered-blue;
+			font-size: 14px;
+			padding-top: 1px;
+		}
+
+		input {
+			position: absolute;
+			display: block;
+			width: 100%;
+			margin: 0;
+			border: 0 none;
+			left: 0;
+			top: 3px;
+			border-radius: 20px;
+			padding: 5px 10px;
+		}
 	}
 }
