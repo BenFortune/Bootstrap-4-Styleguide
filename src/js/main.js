@@ -76,7 +76,7 @@ $(() => {
 			const clickableElements = $('.altered-select .dropdown-menu a');
 
 			if ($(this).hasClass('dropdown-toggle')) {
-				var btnText = $(this).prev();
+				const btnText = $(this).prev();
 				clickableElements.on('click', function(e) {
 					e.preventDefault();
 					btnText.text(this.innerHTML);
@@ -96,42 +96,38 @@ $(() => {
 	pills.on('click', function(e) {
 		const srcEl = $(e.target);
 		if ($(this).hasClass('add')) {
-			console.log('it has the add class');
 			return;
 		} else {
-			console.log('source el parent adds class remove pill');
 			srcEl.parent().addClass('remove');
 			addNewTag($(this).parent());
 		}
 	});
 
 	// ADD TAGS
-	const tags = $('.altered-pill.add');
-	const inputs = $('.altered-pill.add input');
-	tags.on('click', function() {
+	const addPills = $('.altered-pill.add');
+	const pillInputs = $('.altered-pill.add input');
+	addPills.on('click', function() {
 		$(this).find('.remove').removeClass('remove').focus();
 	});
-	inputs.on('blur', function() {
-		var value = $(this).val();
+	pillInputs.on('blur', function() {
+		const value = $(this).val();
 		if (value) {
-			console.log('legit value');
-			var parentEl = $(this).parent().parent();
+			const parentEl = $(this).parent().parent();
 			$(this).parent().text(value).removeClass('add').append('<span>X</span>');
 			addNewTag(parentEl);
-			// addTags();
 		} else {
 			return;
 		}
 	});
 
 	// ADDING NEW TAGS
-	function addNewTag(tagInput) {
-		var targetEl = $(tagInput).children().last();
+	function addNewTag(pillInput) {
+		const targetEl = $(pillInput).children().last();
 		if ($(targetEl).hasClass('add')) {
 			return;
 		} else {
-			var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>';
-			$(tagInput).append(addTagMarkup);
+			const addTagMarkup = '<div class="altered-pill add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>';
+			$(pillInput).append(addTagMarkup);
 		}
 	}
 

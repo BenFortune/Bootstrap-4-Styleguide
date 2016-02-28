@@ -76,19 +76,18 @@ $(function () {
 		var _this = this;
 
 		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
-			var btnText;
-
 			(function () {
 				var that = _this;
 				var clickableElements = $('.altered-select .dropdown-menu a');
 
 				if ($(_this).hasClass('dropdown-toggle')) {
-					btnText = $(_this).prev();
-
-					clickableElements.on('click', function (e) {
-						e.preventDefault();
-						btnText.text(this.innerHTML);
-					});
+					(function () {
+						var btnText = $(_this).prev();
+						clickableElements.on('click', function (e) {
+							e.preventDefault();
+							btnText.text(this.innerHTML);
+						});
+					})();
 				} else {
 					clickableElements.on('click', function (e) {
 						e.preventDefault();
@@ -105,42 +104,38 @@ $(function () {
 	pills.on('click', function (e) {
 		var srcEl = $(e.target);
 		if ($(this).hasClass('add')) {
-			console.log('it has the add class');
 			return;
 		} else {
-			console.log('source el parent adds class remove pill');
 			srcEl.parent().addClass('remove');
 			addNewTag($(this).parent());
 		}
 	});
 
 	// ADD TAGS
-	var tags = $('.altered-pill.add');
-	var inputs = $('.altered-pill.add input');
-	tags.on('click', function () {
+	var addPills = $('.altered-pill.add');
+	var pillInputs = $('.altered-pill.add input');
+	addPills.on('click', function () {
 		$(this).find('.remove').removeClass('remove').focus();
 	});
-	inputs.on('blur', function () {
+	pillInputs.on('blur', function () {
 		var value = $(this).val();
 		if (value) {
-			console.log('legit value');
 			var parentEl = $(this).parent().parent();
 			$(this).parent().text(value).removeClass('add').append('<span>X</span>');
 			addNewTag(parentEl);
-			// addTags();
 		} else {
-				return;
-			}
+			return;
+		}
 	});
 
 	// ADDING NEW TAGS
-	function addNewTag(tagInput) {
-		var targetEl = $(tagInput).children().last();
+	function addNewTag(pillInput) {
+		var targetEl = $(pillInput).children().last();
 		if ($(targetEl).hasClass('add')) {
 			return;
 		} else {
-			var addTagMarkup = '<div class="dice-tag add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>';
-			$(tagInput).append(addTagMarkup);
+			var addTagMarkup = '<div class="altered-pill add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>';
+			$(pillInput).append(addTagMarkup);
 		}
 	}
 
