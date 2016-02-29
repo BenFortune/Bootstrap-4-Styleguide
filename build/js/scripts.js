@@ -121,7 +121,7 @@ $(function () {
 		var value = $(this).val();
 		if (value) {
 			var parentEl = $(this).parent().parent();
-			$(this).parent().text(value).removeClass('add').append('<span>X</span>');
+			$(this).parent().text(value).removeClass('add').append('<span>x</span>');
 			addNewTag(parentEl);
 		} else {
 			return;

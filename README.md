@@ -8,5 +8,4 @@
 - ES6-ify main.js
 - Get SVG icons working
 - Work on Select dropdowns
-- Get adding pills working
 - Fix overflow on alert banners
