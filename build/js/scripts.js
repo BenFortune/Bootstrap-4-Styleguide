@@ -95,6 +95,12 @@ $(function () {
 					});
 				}
 			})();
+		} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
+			var checkboxes = $('.altered-select input[type="checkbox"]');
+			checkboxes.on('click', function (e) {
+				e.preventDefault();
+				console.log('clicked!');
+			});
 		}
 	}
 	// End Select DD & Multi-select DD
@@ -103,19 +109,20 @@ $(function () {
 	var pills = $('.altered-pill');
 	pills.on('click', function (e) {
 		var srcEl = $(e.target);
-		if ($(this).hasClass('add')) {
+		if ($(undefined).hasClass('add')) {
 			return;
 		} else {
 			srcEl.parent().addClass('remove');
-			addNewTag($(this).parent());
+			addNewTag($(undefined).parent());
 		}
 	});
 
 	// ADD TAGS
 	var addPills = $('.altered-pill.add');
 	var pillInputs = $('.altered-pill.add input');
-	addPills.on('click', function () {
-		$(this).find('.remove').removeClass('remove').focus();
+	addPills.on('click', function (e) {
+		var srcEl = $(e.target);
+		$(srcEl).find('.remove').removeClass('remove').focus();
 	});
 	pillInputs.on('blur', function () {
 		var value = $(this).val();
@@ -145,13 +152,13 @@ $(function () {
 	var closeAlertEls = $('.altered-alert .close');
 
 	closeAlertEls.on('click', function (e) {
-		var targetEl = $(e.target);
-		if (targetEl.hasClass('altered-show-block')) {
-			targetEl.removeClass('altered-show-block');
-			targetEl.addClass('altered-hide');
+		var srcEl = $(e.target);
+		if (srcEl.hasClass('altered-show-block')) {
+			srcEl.removeClass('altered-show-block');
+			srcEl.addClass('altered-hide');
 		} else {
-			targetEl.removeClass('altered-hide');
-			targetEl.addClass('altered-show-block;');
+			srcEl.removeClass('altered-hide');
+			srcEl.addClass('altered-show-block;');
 		}
 	});
 	// End Alert Close

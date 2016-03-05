@@ -70,6 +70,7 @@ $(() => {
 		getSelectType.call(that);
 	});
 
+
 	function getSelectType() {
 		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
 			const that = this;
@@ -87,13 +88,19 @@ $(() => {
 					that.innerHTML = this.innerHTML;
 				});
 			}
+		} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
+			const checkboxes = $('.altered-select input[type="checkbox"]');
+			checkboxes.on('click', (e) => {
+				e.preventDefault();
+				console.log('clicked!');
+			});
 		}
 	}
 	// End Select DD & Multi-select DD
 
 	// REMOVE/HIDE TAGS
 	const pills = $('.altered-pill');
-	pills.on('click', function(e) {
+	pills.on('click', (e) => {
 		const srcEl = $(e.target);
 		if ($(this).hasClass('add')) {
 			return;
@@ -106,8 +113,9 @@ $(() => {
 	// ADD TAGS
 	const addPills = $('.altered-pill.add');
 	const pillInputs = $('.altered-pill.add input');
-	addPills.on('click', function() {
-		$(this).find('.remove').removeClass('remove').focus();
+	addPills.on('click', (e) => {
+		const srcEl = $(e.target);
+		$(srcEl).find('.remove').removeClass('remove').focus();
 	});
 	pillInputs.on('blur', function() {
 		const value = $(this).val();
@@ -136,14 +144,14 @@ $(() => {
 	alertEls.addClass('altered-show-block');
 	const closeAlertEls = $('.altered-alert .close');
 
-	closeAlertEls.on('click', function(e) {
-		const targetEl = $(e.target);
-		if (targetEl.hasClass('altered-show-block')) {
-			targetEl.removeClass('altered-show-block');
-			targetEl.addClass('altered-hide');
+	closeAlertEls.on('click', (e) => {
+		const srcEl = $(e.target);
+		if (srcEl.hasClass('altered-show-block')) {
+			srcEl.removeClass('altered-show-block');
+			srcEl.addClass('altered-hide');
 		} else {
-			targetEl.removeClass('altered-hide');
-			targetEl.addClass('altered-show-block;');
+			srcEl.removeClass('altered-hide');
+			srcEl.addClass('altered-show-block;');
 		}
 	});
 	// End Alert Close
