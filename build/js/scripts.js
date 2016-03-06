@@ -72,6 +72,13 @@ $(function () {
 		getSelectType.call(that);
 	});
 
+	var multiSelectTrigger = $('.altered-select .altered-btn-secondary');
+	multiSelectTrigger.on('click', function (e) {
+		var srcEl = $(e.target);
+		var parent = $(srcEl).parent();
+		console.log('the parent is', parent);
+	});
+
 	function getSelectType() {
 		var _this = this;
 

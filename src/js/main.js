@@ -70,6 +70,12 @@ $(() => {
 		getSelectType.call(that);
 	});
 
+	const multiSelectTrigger = $('.altered-select .altered-btn-secondary');
+	multiSelectTrigger.on('click', (e) => {
+		const srcEl = $(e.target);
+		const parent = $(srcEl).parent();
+	});
+
 
 	function getSelectType() {
 		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
