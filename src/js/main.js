@@ -70,10 +70,15 @@ $(() => {
 		getSelectType.call(that);
 	});
 
-	const multiSelectTrigger = $('.altered-select .altered-btn-secondary');
+	const multiSelectTrigger = $('[data-select-type="multiple"]');
 	multiSelectTrigger.on('click', (e) => {
 		const srcEl = $(e.target);
 		const parent = $(srcEl).parent();
+		if (parent.hasClass('open')) {
+			parent.removeClass('open');
+		} else {
+			parent.addClass('open');
+		}
 	});
 
 
@@ -96,9 +101,8 @@ $(() => {
 			}
 		} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
 			const checkboxes = $('.altered-select input[type="checkbox"]');
-			checkboxes.on('click', (e) => {
-				e.preventDefault();
-				console.log('clicked!');
+			checkboxes.on('click', () => {
+				console.log('clicked element text', srcElParent.text());
 			});
 		}
 	}

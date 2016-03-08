@@ -72,11 +72,15 @@ $(function () {
 		getSelectType.call(that);
 	});
 
-	var multiSelectTrigger = $('.altered-select .altered-btn-secondary');
+	var multiSelectTrigger = $('[data-select-type="multiple"]');
 	multiSelectTrigger.on('click', function (e) {
 		var srcEl = $(e.target);
 		var parent = $(srcEl).parent();
-		console.log('the parent is', parent);
+		if (parent.hasClass('open')) {
+			parent.removeClass('open');
+		} else {
+			parent.addClass('open');
+		}
 	});
 
 	function getSelectType() {
@@ -105,8 +109,8 @@ $(function () {
 		} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
 			var checkboxes = $('.altered-select input[type="checkbox"]');
 			checkboxes.on('click', function (e) {
-				e.preventDefault();
-				console.log('clicked!');
+				var srcElParent = $(e.target).parent().parent().parent().prev().prev();
+				console.log('clicked element text', srcElParent, srcElParent.text());
 			});
 		}
 	}
