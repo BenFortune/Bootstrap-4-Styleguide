@@ -72,6 +72,7 @@ $(function () {
 		getSelectType.call(that);
 	});
 
+	// Multiselect Dropdown
 	var multiSelectTrigger = $('[data-select-type="multiple"]');
 	multiSelectTrigger.on('click', function (e) {
 		var srcEl = $(e.target);
@@ -109,8 +110,37 @@ $(function () {
 		} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
 			var checkboxes = $('.altered-select input[type="checkbox"]');
 			checkboxes.on('click', function (e) {
-				var srcElParent = $(e.target).parent().parent().parent().prev().prev();
-				console.log('clicked element text', srcElParent, srcElParent.text());
+				var srcElText = $(e.target).parent().text();
+				var msButtons = $('[data-select-type="multiple"]');
+				var _iteratorNormalCompletion = true;
+				var _didIteratorError = false;
+				var _iteratorError = undefined;
+
+				try {
+					for (var _iterator = msButtons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+						var button = _step.value;
+
+						if ($(button).hasClass('.dropdown-toggle')) {
+							return;
+						} else {
+							$(button).innerHTML = srcElText;
+						}
+						console.log(button);
+					}
+				} catch (err) {
+					_didIteratorError = true;
+					_iteratorError = err;
+				} finally {
+					try {
+						if (!_iteratorNormalCompletion && _iterator.return) {
+							_iterator.return();
+						}
+					} finally {
+						if (_didIteratorError) {
+							throw _iteratorError;
+						}
+					}
+				}
 			});
 		}
 	}

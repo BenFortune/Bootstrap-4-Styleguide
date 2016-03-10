@@ -70,6 +70,7 @@ $(() => {
 		getSelectType.call(that);
 	});
 
+	// Multiselect Dropdown
 	const multiSelectTrigger = $('[data-select-type="multiple"]');
 	multiSelectTrigger.on('click', (e) => {
 		const srcEl = $(e.target);
@@ -101,8 +102,19 @@ $(() => {
 			}
 		} else if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'multiple') {
 			const checkboxes = $('.altered-select input[type="checkbox"]');
-			checkboxes.on('click', () => {
-				console.log('clicked element text', srcElParent.text());
+			checkboxes.on('click', (e) => {
+				const srcElText = $(e.target).parent().text();
+				const msButtons = $('[data-select-type="multiple"]');
+				for (let button of msButtons) {
+					if ($(button).hasClass('.dropdown-toggle')) {
+						console.log('let us break because this is the wrong button');
+						break;
+					} else {
+						console.log('add some text');
+						$(button).innerHTML = srcElText;
+					}
+					console.log(button);
+				}
 			});
 		}
 	}
