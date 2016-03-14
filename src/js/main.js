@@ -106,7 +106,8 @@ $(() => {
 				const srcElText = $(e.target).parent().text();
 				const msButtons = $('[data-select-type="multiple"]');
 				for (let button of msButtons) {
-					if ($(button).hasClass('.dropdown-toggle')) {
+					console.log('button in the for loop is', button, srcElText);
+					if ($(button).innerHTML !== srcElText) {
 						console.log('let us break because this is the wrong button');
 						break;
 					} else {

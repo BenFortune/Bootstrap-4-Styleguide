@@ -120,9 +120,12 @@ $(function () {
 					for (var _iterator = msButtons[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 						var button = _step.value;
 
-						if ($(button).hasClass('.dropdown-toggle')) {
-							return;
+						console.log('button in the for loop is', button, srcElText);
+						if ($(button).innerHTML !== srcElText) {
+							console.log('let us break because this is the wrong button');
+							break;
 						} else {
+							console.log('add some text');
 							$(button).innerHTML = srcElText;
 						}
 						console.log(button);

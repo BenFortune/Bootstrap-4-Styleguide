@@ -82,6 +82,9 @@
 		padding-bottom: 15px;
 		background: #FFF none;
 		border: 1px solid $altered-gray;
+		@media only screen and (max-width: $altered-screen-sm) {
+			margin-bottom: 1rem;
+		}
 
 		.color-tile {
 			height: 40px;
