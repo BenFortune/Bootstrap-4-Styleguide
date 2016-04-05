@@ -2,6 +2,7 @@
 
 $(function () {
 
+	// Initialize Slider
 	var mySlider = $('#slider').slider();
 	mySlider.slider('setValue', 8);
 
@@ -53,20 +54,6 @@ $(function () {
 			alteredToggleLabel.textContent = 'On';
 		}
 	});
-	// const diceToggle = $('.altered-toggle-control');
-	// const diceToggleLabel = $('.altered-toggle-label');
-	// diceToggle.addClass('on');
-	//
-	// // Click event
-	// diceToggle.on('click', function() {
-	// 	if ($(this).hasClass('on')) {
-	// 		$(this).removeClass('on').addClass('off');
-	// 		diceToggleLabel.text('Off');
-	// 	} else {
-	// 		$(this).removeClass('off').addClass('on');
-	// 		diceToggleLabel.text('On');
-	// 	}
-	// });
 	// END Toggle Switch
 
 	// Form Group Button Change

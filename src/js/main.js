@@ -1,5 +1,6 @@
 $(() => {
 
+	// Initialize Slider
 	const mySlider = $('#slider').slider();
 	mySlider.slider('setValue', 8);
 
