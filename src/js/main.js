@@ -8,27 +8,31 @@ $(() => {
 	$('[data-toggle="tooltip"]').tooltip();
 
 	// BEGIN Float Label
-	const floatInput = $('.float-label input');
+	const floatInput = document.querySelectorAll('.float-label input');
 	const onClass = 'float-label-on';
 	const showClass = 'float-label';
 
-	floatInput.on('focus', function(e) {
-		floatLabelHandler.call(e.target);
-	});
-	floatInput.on('blur', function(e) {
-		floatLabelHandler.call(e.target);
-	});
-	floatInput.on('keyup', function(e) {
-		floatLabelHandler.call(e.target);
-	});
+	for (let i = 0; i < floatInput.length; i++) {
+		floatInput[i].addEventListener('focus', (e) => {
+			floatLabelHandler.call(e.target, 'something else');
+		});
+
+		floatInput[i].addEventListener('blur', (e) => {
+			floatLabelHandler.call(e.target, 'something else');
+		});
+
+		floatInput[i].addEventListener('keyup', (e) => {
+			floatLabelHandler.call(e.target, 'something else');
+		});
+	}
 
 	function floatLabelHandler() {
 		if (!this.value || this.value === '') {
-			$(this).removeClass(showClass);
-			$(this).prev().removeClass(onClass);
+			this.classList.remove(showClass);
+			this.previousElementSibling.classList.remove(onClass);
 		} else {
-			$(this).addClass(showClass);
-			$(this).prev().addClass(onClass);
+			this.classList.add(showClass);
+			this.previousElementSibling.classList.add(onClass);
 		}
 	}
 	// END Float Label

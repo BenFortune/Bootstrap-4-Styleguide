@@ -23,6 +23,10 @@
 		&.form-control-warning {
 			border-color: $altered-yellow;
 		}
+
+		&.form-control-success {
+			border-color: $success-green;
+		}
 	}
 
 	.altered-toggle-wrapper {
