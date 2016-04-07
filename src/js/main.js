@@ -91,7 +91,6 @@ $(() => {
 		}
 	});
 
-
 	function getSelectType() {
 		if (this.hasAttribute('data-select-type') && this.getAttribute('data-select-type') === 'single') {
 			const that = this;
@@ -173,18 +172,26 @@ $(() => {
 
 	// Alert Close
 	const alertEls = $('.altered-alert');
-	alertEls.addClass('altered-show-block');
 	const closeAlertEls = $('.altered-alert .close');
 
-	closeAlertEls.on('click', (e) => {
-		const srcEl = $(e.target);
-		if (srcEl.hasClass('altered-show-block')) {
-			srcEl.removeClass('altered-show-block');
-			srcEl.addClass('altered-hide');
-		} else {
-			srcEl.removeClass('altered-hide');
-			srcEl.addClass('altered-show-block;');
-		}
-	});
+	for (let i = 0; i < alertEls.length; i++) {
+		alertEls[i].addEventListener('click', () => {
+			alertEls[i].classList.add('altered-show-block');
+		});
+	}
+
+	for (let i = 0; i < closeAlertEls.length; i++) {
+		closeAlertEls[i].addEventListener('click', (e) => {
+			const that = e.target;
+
+			if (that.className === 'altered-alert close altered-show-block') {
+				that.classList.remove('altered-show-block');
+				that.classList.add('altered-hide');
+			} else {
+				that.classList.remove('altered-hide');
+				that.classList.add('altered-show-block');
+			}
+		});
+	}
 	// End Alert Close
 });

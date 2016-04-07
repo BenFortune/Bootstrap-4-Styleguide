@@ -201,8 +201,31 @@ $(function () {
 
 	// Alert Close
 	var alertEls = $('.altered-alert');
-	alertEls.addClass('altered-show-block');
 	var closeAlertEls = $('.altered-alert .close');
+
+	var _loop = function _loop(i) {
+		alertEls[i].addEventListener('click', function () {
+			alertEls[i].classList.add('altered-show-block');
+		});
+	};
+
+	for (var i = 0; i < alertEls.length; i++) {
+		_loop(i);
+	}
+
+	for (var i = 0; i < closeAlertEls.length; i++) {
+		closeAlertEls[i].addEventListener('click', function (e) {
+			var that = e.target;
+
+			if (that.className === 'altered-alert close altered-show-block') {
+				that.classList.remove('altered-show-block');
+				that.classList.add('altered-hide');
+			} else {
+				that.classList.remove('altered-hide');
+				that.classList.add('altered-show-block');
+			}
+		});
+	}
 
 	closeAlertEls.on('click', function (e) {
 		var srcEl = $(e.target);
@@ -214,5 +237,22 @@ $(function () {
 			srcEl.addClass('altered-show-block;');
 		}
 	});
+	// End Alert Close
+
+	// Alert Close
+	// const alertEls = $('.altered-alert');
+	// alertEls.addClass('altered-show-block');
+	// const closeAlertEls = $('.altered-alert .close');
+	//
+	// closeAlertEls.on('click', (e) => {
+	// 	const srcEl = $(e.target);
+	// 	if (srcEl.hasClass('altered-show-block')) {
+	// 		srcEl.removeClass('altered-show-block');
+	// 		srcEl.addClass('altered-hide');
+	// 	} else {
+	// 		srcEl.removeClass('altered-hide');
+	// 		srcEl.addClass('altered-show-block;');
+	// 	}
+	// });
 	// End Alert Close
 });
