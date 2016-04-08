@@ -25,6 +25,11 @@ const gulpConfig = {
 	autoPrefxConfig: {
 		browsers: ['last 2 versions'],
 		cascade: false
+	},
+	babelConfig: {
+		presets: [
+			'es2015'
+		]
 	}
 }
 
@@ -56,7 +61,7 @@ gulp.task('lint', function() {
 
 gulp.task('scripts', () => {
 	return gulp.src(gulpConfig.jsPaths.src)
-	.pipe(gBabel())
+	.pipe(gBabel(gulpConfig.babelConfig))
 	.pipe(gConcat('scripts.js'))
 	.pipe(gulp.dest(gulpConfig.jsPaths.dest));
 });

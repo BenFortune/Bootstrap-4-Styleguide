@@ -226,33 +226,5 @@ $(function () {
 			}
 		});
 	}
-
-	closeAlertEls.on('click', function (e) {
-		var srcEl = $(e.target);
-		if (srcEl.hasClass('altered-show-block')) {
-			srcEl.removeClass('altered-show-block');
-			srcEl.addClass('altered-hide');
-		} else {
-			srcEl.removeClass('altered-hide');
-			srcEl.addClass('altered-show-block;');
-		}
-	});
-	// End Alert Close
-
-	// Alert Close
-	// const alertEls = $('.altered-alert');
-	// alertEls.addClass('altered-show-block');
-	// const closeAlertEls = $('.altered-alert .close');
-	//
-	// closeAlertEls.on('click', (e) => {
-	// 	const srcEl = $(e.target);
-	// 	if (srcEl.hasClass('altered-show-block')) {
-	// 		srcEl.removeClass('altered-show-block');
-	// 		srcEl.addClass('altered-hide');
-	// 	} else {
-	// 		srcEl.removeClass('altered-hide');
-	// 		srcEl.addClass('altered-show-block;');
-	// 	}
-	// });
 	// End Alert Close
 });
