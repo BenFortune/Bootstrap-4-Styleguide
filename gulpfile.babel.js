@@ -5,6 +5,7 @@ import gSass from 'gulp-sass';
 import gScssLint from 'gulp-scss-lint';
 import gConcat from 'gulp-concat';
 import gAutoPrefixer from 'gulp-autoprefixer';
+import gCssComb from 'gulp-csscomb';
 import gCssMinify from 'gulp-cssnano';
 import gEsLint from 'gulp-eslint';
 import gBabel from 'gulp-babel';
@@ -49,14 +50,15 @@ gulp.task('styles', () => {
 	.pipe(gScssLint(gulpConfig.scssLint))
 	.pipe(gSass())
 	.pipe(gAutoPrefixer(gulpConfig.autoPrefxConfig))
+	.pipe(gCssComb())
 	.pipe(gCssMinify())
 	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
 });
 
 gulp.task('lint', function() {
-  return gulp.src('./src/js/*.js').pipe(gEsLint())
-  .pipe(gEsLint.format())
-  .pipe(gEsLint.failOnError());
+	return gulp.src('./src/js/*.js').pipe(gEsLint())
+	.pipe(gEsLint.format())
+	.pipe(gEsLint.failOnError());
 });
 
 gulp.task('scripts', () => {
