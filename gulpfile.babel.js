@@ -18,19 +18,19 @@ const gulpConfig = {
 	},
 	jsPaths: {
 		src: './src/js/*.js',
-		dest: './build/js'
+		dest: './build/js',
+		filePaths: [
+			'bower_components/jquery/dist/jquery.js',
+			'node_modules/tether/dist/js/tether.min.js',
+			'bootstrap-4.0.0-alpha/dist/js/bootstrap.min.js',
+			'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
+			'build/js/main.js'
+		]
 	},
-	jsFilePaths: [
-		'bower_components/jquery/dist/jquery.js',
-		'node_modules/tether/dist/js/tether.min.js',
-		'bootstrap-4.0.0-alpha/dist/js/bootstrap.min.js',
-		'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
-		'build/js/main.js'
-	],
 	scssLint: {
 		'config': 'scss-lint.yml',
 	},
-	autoPrefxConfig: {
+	autoPrefixConfig: {
 		browsers: ['last 2 versions'],
 		cascade: false
 	},
@@ -56,7 +56,7 @@ gulp.task('stylesBuild', () => {
 	return gulp.src(gulpConfig.sassPaths.src)
 	.pipe(gScssLint(gulpConfig.scssLint))
 	.pipe(gSass())
-	.pipe(gAutoPrefixer(gulpConfig.autoPrefxConfig))
+	.pipe(gAutoPrefixer(gulpConfig.autoPrefixConfig))
 	.pipe(gCssComb())
 	.pipe(gCssMinify())
 	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
@@ -75,7 +75,7 @@ gulp.task('scriptsBuild', () => {
 });
 
 gulp.task('scriptsConcat', () => {
-	return gulp.src(gulpConfig.jsFilePaths)
+	return gulp.src(gulpConfig.jsPaths.filePaths)
 	.pipe(gConcat('scripts.min.js'))
 	.pipe(gulp.dest(gulpConfig.jsPaths.dest));
 })

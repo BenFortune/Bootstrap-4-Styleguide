@@ -59,16 +59,22 @@ $(() => {
 	// END Toggle Switch
 
 	// Form Group Button Change
-	const channelBtn = $('.altered-btn-group-tab button');
+	const channelBtn = document.querySelectorAll('.altered-btn-group-tab button');
 
-	channelBtn.on('click', function(e) {
-		const that = $(this);
-		e.preventDefault();
-		if (that.hasClass('inactive')) {
-			channelBtn.removeClass('active').addClass('inactive');
-			that.removeClass('inactive').addClass('active');
-		}
-	});
+	for (let i = 0; i < channelBtn.length; i++) {
+		channelBtn[i].addEventListener('click', (e) => {
+			e.preventDefault();
+			const that = e.target;
+			if (that.className === 'btn inactive') {
+				for (let j = 0; j < channelBtn.length; j++) {
+					channelBtn[j].classList.remove('active');
+					channelBtn[j].classList.add('inactive');
+				}
+				that.classList.remove('inactive');
+				that.classList.add('active');
+			}
+		});
+	}
 	// End Form Group Button Change
 
 	// Select DD & Multi-select DD
