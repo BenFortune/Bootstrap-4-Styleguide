@@ -206,8 +206,8 @@ $(function () {
 	}
 
 	// Alert Close
-	var alertEls = $('.altered-alert');
-	var closeAlertEls = $('.altered-alert .close');
+	var alertEls = document.querySelectorAll('.altered-alert');
+	var closeAlertEls = document.querySelectorAll('.altered-alert .close');
 
 	var _loop = function _loop(i) {
 		alertEls[i].addEventListener('click', function () {

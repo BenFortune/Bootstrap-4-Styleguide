@@ -177,8 +177,8 @@ $(() => {
 	}
 
 	// Alert Close
-	const alertEls = $('.altered-alert');
-	const closeAlertEls = $('.altered-alert .close');
+	const alertEls = document.querySelectorAll('.altered-alert');
+	const closeAlertEls = document.querySelectorAll('.altered-alert .close');
 
 	for (let i = 0; i < alertEls.length; i++) {
 		alertEls[i].addEventListener('click', () => {
