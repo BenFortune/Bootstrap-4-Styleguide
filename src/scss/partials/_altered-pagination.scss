@@ -1,0 +1,42 @@
+.altered-pagination {
+	margin-top: 20px 0;
+	.pagination {
+		margin: 0;
+		vertical-align: bottom;
+
+		.page-item {
+			color: $altered-gray;
+			.page-link {
+				position: relative;
+				background: $altered-light-gray;
+
+				&:hover {
+					z-index: 100;
+					text-decoration: none;
+					border: 1px solid $altered-light-blue;
+					background: #FFFFFF;
+				}
+
+				&:focus {
+					text-decoration: none;
+					background: $altered-light-gray;
+				}
+			}
+
+			&.active {
+				z-index: 200;
+				color: $altered-blue;
+				border: 1px solid $altered-blue;
+				background: none;
+
+				&:hover,
+				&:focus {
+					z-index: 200;
+					color: $altered-gray;
+					background: none;
+				}
+			}
+		}
+
+	}
+}

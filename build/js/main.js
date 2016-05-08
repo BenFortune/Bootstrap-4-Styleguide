@@ -175,6 +175,7 @@ $(function () {
 			addNewTag($(undefined).parent());
 		}
 	});
+	// END REMOVE/HIDE TAGS
 
 	// ADD TAGS
 	var addPills = $('.altered-pill.add');
@@ -193,6 +194,7 @@ $(function () {
 			return;
 		}
 	});
+	// END ADD TAGS
 
 	// ADDING NEW TAGS
 	function addNewTag(pillInput) {
@@ -204,8 +206,9 @@ $(function () {
 			$(pillInput).append(addTagMarkup);
 		}
 	}
+	// END ADDING NEW TAGS
 
-	// Alert Close
+	// ALERTS CLOSE
 	var alertEls = document.querySelectorAll('.altered-alert');
 	var closeAlertEls = document.querySelectorAll('.altered-alert .close');
 
@@ -232,5 +235,8 @@ $(function () {
 			}
 		});
 	}
-	// End Alert Close
+	// END ALERTS CLOSE
+
+	// PAGINATION
+	// END PAGINATION
 });
