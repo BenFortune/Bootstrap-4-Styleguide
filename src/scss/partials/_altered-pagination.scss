@@ -4,10 +4,12 @@
 		margin: 0;
 		vertical-align: bottom;
 
-		.page-item {
+		li.page-item {
 			color: $altered-gray;
-			.page-link {
+			a.page-link {
 				position: relative;
+				color: $altered-gray;
+				border-color: $altered-gray-90;
 				background: $altered-light-gray;
 
 				&:hover {
@@ -25,9 +27,12 @@
 
 			&.active {
 				z-index: 200;
-				color: $altered-blue;
-				border: 1px solid $altered-blue;
-				background: none;
+
+				a {
+					color: $altered-blue;
+					border: 1px solid $altered-blue;
+					background: none;
+				}
 
 				&:hover,
 				&:focus {

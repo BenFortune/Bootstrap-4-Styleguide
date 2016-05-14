@@ -146,7 +146,7 @@ $(() => {
 			addNewTag($(this).parent());
 		}
 	});
-	// END REMOVE/HIDE TAGS
+	// ENDREMOVE/HIDE TAGS
 
 	// ADD TAGS
 	const addPills = $('.altered-pill.add');
@@ -178,7 +178,6 @@ $(() => {
 		}
 	}
 	// END ADDING NEW TAGS
-
 	// ALERTS CLOSE
 	const alertEls = document.querySelectorAll('.altered-alert');
 	const closeAlertEls = document.querySelectorAll('.altered-alert .close');
@@ -205,5 +204,26 @@ $(() => {
 	// END ALERTS CLOSE
 
 	// PAGINATION
+	const paginationLinks = document.querySelectorAll('.page-link');
+
+	for (var i = 0; i < paginationLinks.length; i++) {
+		paginationLinks[i].addEventListener('click', (e) => {
+			e.preventDefault();
+			const that = e.target;
+
+			if (that.parentNode.className === 'page-item active') {
+				return;
+			} else {
+				removeActiveClass();
+				that.parentNode.classList.add('active');
+			}
+		});
+	}
+
+	function removeActiveClass() {
+		for (var i = 0; i < paginationLinks.length; i++) {
+			paginationLinks[i].parentNode.classList.remove('active');
+		}
+	}
 	// END PAGINATION
 });
