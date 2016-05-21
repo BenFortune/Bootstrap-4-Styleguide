@@ -18,7 +18,7 @@
 
 		&.form-control-error {
 			border-color: $altered-red;
-			background: url(../svg-icons/error-x.svg) no-repeat 100% 0;
+			background: url('../svg-icons/error-x.svg') no-repeat 100% 0;
 		}
 
 		&.form-control-warning {
@@ -27,7 +27,7 @@
 
 		&.form-control-success {
 			border-color: $success-green;
-			background: url(../svg-icons/success-check.svg) no-repeat 100% 0;
+			background: url('../svg-icons/success-check.svg') no-repeat 100% 0;
 		}
 	}
 

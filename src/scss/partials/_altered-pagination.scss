@@ -1,11 +1,13 @@
 .altered-pagination {
 	margin-top: 20px 0;
+
 	.pagination {
 		margin: 0;
 		vertical-align: bottom;
 
 		li.page-item {
 			color: $altered-gray;
+
 			a.page-link {
 				position: relative;
 				color: $altered-gray;
@@ -16,7 +18,7 @@
 					z-index: 100;
 					text-decoration: none;
 					border: 1px solid $altered-light-blue;
-					background: #FFFFFF;
+					background: #FFF;
 				}
 
 				&:focus {
@@ -35,10 +37,12 @@
 				}
 
 				&:hover,
-				&:focus {
+				&:focus,
+				&:active {
 					z-index: 200;
 					color: $altered-gray;
 					background: none;
+					outline: none;
 				}
 			}
 		}

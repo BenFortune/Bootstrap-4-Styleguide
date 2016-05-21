@@ -1,5 +1,4 @@
 $(() => {
-
 	// Initialize Slider
 	const mySlider = $('#slider').slider();
 	mySlider.slider('setValue', 8);
@@ -44,7 +43,6 @@ $(() => {
 	alteredToggle.classList.add('on');
 
 	alteredToggle.addEventListener('click', (e) => {
-		console.log('something was clicked');
 		const that = e.target;
 		if(that.parentNode.className === 'altered-toggle-control on') {
 			that.parentNode.classList.remove('on');
@@ -66,14 +64,18 @@ $(() => {
 			e.preventDefault();
 			const that = e.target;
 			if (that.className === 'btn inactive') {
-				for (let j = 0; j < channelBtn.length; j++) {
-					channelBtn[j].classList.remove('active');
-					channelBtn[j].classList.add('inactive');
-				}
+				resetButtonClass();
 				that.classList.remove('inactive');
 				that.classList.add('active');
 			}
 		});
+	}
+
+	function resetButtonClass() {
+		for (let i = 0; i < channelBtn.length; i++) {
+			channelBtn[i].classList.remove('active');
+			channelBtn[i].classList.add('inactive');
+		}
 	}
 	// End Form Group Button Change
 

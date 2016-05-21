@@ -1,7 +1,6 @@
 'use strict';
 
 $(function () {
-
 	// Initialize Slider
 	var mySlider = $('#slider').slider();
 	mySlider.slider('setValue', 8);
@@ -46,7 +45,6 @@ $(function () {
 	alteredToggle.classList.add('on');
 
 	alteredToggle.addEventListener('click', function (e) {
-		console.log('something was clicked');
 		var that = e.target;
 		if (that.parentNode.className === 'altered-toggle-control on') {
 			that.parentNode.classList.remove('on');
@@ -68,14 +66,18 @@ $(function () {
 			e.preventDefault();
 			var that = e.target;
 			if (that.className === 'btn inactive') {
-				for (var j = 0; j < channelBtn.length; j++) {
-					channelBtn[j].classList.remove('active');
-					channelBtn[j].classList.add('inactive');
-				}
+				resetButtonClass();
 				that.classList.remove('inactive');
 				that.classList.add('active');
 			}
 		});
+	}
+
+	function resetButtonClass() {
+		for (var _i3 = 0; _i3 < channelBtn.length; _i3++) {
+			channelBtn[_i3].classList.remove('active');
+			channelBtn[_i3].classList.add('inactive');
+		}
 	}
 	// End Form Group Button Change
 
@@ -211,18 +213,18 @@ $(function () {
 	var alertEls = document.querySelectorAll('.altered-alert');
 	var closeAlertEls = document.querySelectorAll('.altered-alert .close');
 
-	var _loop = function _loop(_i3) {
-		alertEls[_i3].addEventListener('click', function () {
-			alertEls[_i3].classList.add('altered-show-block');
+	var _loop = function _loop(_i4) {
+		alertEls[_i4].addEventListener('click', function () {
+			alertEls[_i4].classList.add('altered-show-block');
 		});
 	};
 
-	for (var _i3 = 0; _i3 < alertEls.length; _i3++) {
-		_loop(_i3);
+	for (var _i4 = 0; _i4 < alertEls.length; _i4++) {
+		_loop(_i4);
 	}
 
-	for (var _i4 = 0; _i4 < closeAlertEls.length; _i4++) {
-		closeAlertEls[_i4].addEventListener('click', function (e) {
+	for (var _i5 = 0; _i5 < closeAlertEls.length; _i5++) {
+		closeAlertEls[_i5].addEventListener('click', function (e) {
 			var that = e.target;
 
 			if (that.className === 'altered-alert close altered-show-block') {

@@ -9,48 +9,11 @@ import gCssMinify from 'gulp-cssnano';
 import gEsLint from 'gulp-eslint';
 import gBabel from 'gulp-babel';
 import gConcat from 'gulp-concat';
+import requireDir from 'require-dir'
 import gRunSequence from 'run-sequence';
+import { gulpConfig } from './config'
 
-const gulpConfig = {
-	sassPaths: {
-		src: './src/scss/**/*.scss',
-		dest: './build/css'
-	},
-	jsPaths: {
-		src: './src/js/*.js',
-		dest: './build/js',
-		filePaths: [
-			'bower_components/jquery/dist/jquery.js',
-			'node_modules/tether/dist/js/tether.min.js',
-			'bootstrap-4.0.0-alpha/dist/js/bootstrap.min.js',
-			'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
-			'build/js/main.js'
-		]
-	},
-	scssLint: {
-		'config': 'scss-lint.yml',
-	},
-	autoPrefixConfig: {
-		browsers: ['last 2 versions'],
-		cascade: false
-	},
-	babelConfig: {
-		presets: [
-			'es2015'
-		]
-	}
-}
-
-gulp.task('sass', () => {
-	return gulp.src(gulpConfig.sassPaths.src)
-	.pipe(gSass())
-	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
-});
-
-gulp.task('scss-lint', () => {
-	return gulp.src(gulpConfig.sassPaths.src)
-	.pipe(gScssLint(gulpConfig.scssLint));
-});
+requireDir('./gulp', {recurse: true})
 
 gulp.task('stylesBuild', () => {
 	return gulp.src(gulpConfig.sassPaths.src)
@@ -63,7 +26,8 @@ gulp.task('stylesBuild', () => {
 });
 
 gulp.task('scriptsLint', function() {
-	return gulp.src('./src/js/*.js').pipe(gEsLint())
+	return gulp.src('./src/js/*.js')
+	.pipe(gEsLint())
 	.pipe(gEsLint.format())
 	.pipe(gEsLint.failOnError());
 });
