@@ -1,6 +1,7 @@
 'use strict';
 
 $(function () {
+
 	// Initialize Slider
 	var mySlider = $('#slider').slider();
 	mySlider.slider('setValue', 8);
@@ -13,16 +14,16 @@ $(function () {
 	var onClass = 'float-label-on';
 	var showClass = 'float-label';
 
-	for (var _i = 0; _i < floatInput.length; _i++) {
-		floatInput[_i].addEventListener('focus', function (e) {
+	for (var i = 0; i < floatInput.length; i++) {
+		floatInput[i].addEventListener('focus', function (e) {
 			floatLabelHandler.call(e.target, 'something else');
 		});
 
-		floatInput[_i].addEventListener('blur', function (e) {
+		floatInput[i].addEventListener('blur', function (e) {
 			floatLabelHandler.call(e.target, 'something else');
 		});
 
-		floatInput[_i].addEventListener('keyup', function (e) {
+		floatInput[i].addEventListener('keyup', function (e) {
 			floatLabelHandler.call(e.target, 'something else');
 		});
 	}
@@ -61,8 +62,8 @@ $(function () {
 	// Form Group Button Change
 	var channelBtn = document.querySelectorAll('.altered-btn-group-tab button');
 
-	for (var _i2 = 0; _i2 < channelBtn.length; _i2++) {
-		channelBtn[_i2].addEventListener('click', function (e) {
+	for (var i = 0; i < channelBtn.length; i++) {
+		channelBtn[i].addEventListener('click', function (e) {
 			e.preventDefault();
 			var that = e.target;
 			if (that.className === 'btn inactive') {
@@ -74,9 +75,9 @@ $(function () {
 	}
 
 	function resetButtonClass() {
-		for (var _i3 = 0; _i3 < channelBtn.length; _i3++) {
-			channelBtn[_i3].classList.remove('active');
-			channelBtn[_i3].classList.add('inactive');
+		for (var i = 0; i < channelBtn.length; i++) {
+			channelBtn[i].classList.remove('active');
+			channelBtn[i].classList.add('inactive');
 		}
 	}
 	// End Form Group Button Change
@@ -213,18 +214,18 @@ $(function () {
 	var alertEls = document.querySelectorAll('.altered-alert');
 	var closeAlertEls = document.querySelectorAll('.altered-alert .close');
 
-	var _loop = function _loop(_i4) {
-		alertEls[_i4].addEventListener('click', function () {
-			alertEls[_i4].classList.add('altered-show-block');
+	var _loop = function _loop(i) {
+		alertEls[i].addEventListener('click', function () {
+			alertEls[i].classList.add('altered-show-block');
 		});
 	};
 
-	for (var _i4 = 0; _i4 < alertEls.length; _i4++) {
-		_loop(_i4);
+	for (var i = 0; i < alertEls.length; i++) {
+		_loop(i);
 	}
 
-	for (var _i5 = 0; _i5 < closeAlertEls.length; _i5++) {
-		closeAlertEls[_i5].addEventListener('click', function (e) {
+	for (var i = 0; i < closeAlertEls.length; i++) {
+		closeAlertEls[i].addEventListener('click', function (e) {
 			var that = e.target;
 
 			if (that.className === 'altered-alert close altered-show-block') {

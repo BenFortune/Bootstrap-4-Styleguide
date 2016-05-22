@@ -11,7 +11,7 @@ import gBabel from 'gulp-babel';
 import gConcat from 'gulp-concat';
 import requireDir from 'require-dir'
 import gRunSequence from 'run-sequence';
-import { gulpConfig } from './config'
+import { gulpConfig } from './config';
 
 requireDir('./gulp', {recurse: true})
 

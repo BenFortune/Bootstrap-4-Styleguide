@@ -1,4 +1,5 @@
 $(() => {
+
 	// Initialize Slider
 	const mySlider = $('#slider').slider();
 	mySlider.slider('setValue', 8);
@@ -208,7 +209,7 @@ $(() => {
 	// PAGINATION
 	const paginationLinks = document.querySelectorAll('.page-link');
 
-	for (var i = 0; i < paginationLinks.length; i++) {
+	for (let i = 0; i < paginationLinks.length; i++) {
 		paginationLinks[i].addEventListener('click', (e) => {
 			e.preventDefault();
 			const that = e.target;
@@ -223,7 +224,7 @@ $(() => {
 	}
 
 	function removeActiveClass() {
-		for (var i = 0; i < paginationLinks.length; i++) {
+		for (let i = 0; i < paginationLinks.length; i++) {
 			paginationLinks[i].parentNode.classList.remove('active');
 		}
 	}

@@ -28,5 +28,9 @@ module.exports = {
 		"jquery": true,
 		"$": true
 	},
+	"ecmaFeatures": {
+		"modules": true,
+		"jsx": true
+	},
 	"extends": "eslint:recommended"
 };
