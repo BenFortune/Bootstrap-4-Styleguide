@@ -56,21 +56,11 @@ function miscJquery() {
 },{}],3:[function(require,module,exports){
 'use strict';
 
-var _miscJquery = require('./components/misc-jquery');
-
-var _miscJquery2 = _interopRequireDefault(_miscJquery);
-
-var _floatLabel = require('./components/float-label');
-
-var _floatLabel2 = _interopRequireDefault(_floatLabel);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-$(function () {
-
-	(0, _miscJquery2.default)();
-	(0, _floatLabel2.default)();
-
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = floatLabel;
+function floatLabel() {
 	// BEGIN Toggle Switch
 	var alteredToggle = document.querySelector('.altered-toggle-control');
 	var alteredToggleLabel = document.querySelector('.altered-toggle-label');
@@ -90,6 +80,30 @@ $(function () {
 		}
 	});
 	// END Toggle Switch
+}
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
+var _miscJquery = require('./components/misc-jquery');
+
+var _miscJquery2 = _interopRequireDefault(_miscJquery);
+
+var _floatLabel = require('./components/float-label');
+
+var _floatLabel2 = _interopRequireDefault(_floatLabel);
+
+var _toggleSwitch = require('./components/toggle-switch');
+
+var _toggleSwitch2 = _interopRequireDefault(_toggleSwitch);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+$(function () {
+
+	(0, _miscJquery2.default)();
+	(0, _floatLabel2.default)();
+	(0, _toggleSwitch2.default)();
 
 	// Form Group Button Change
 	var channelBtn = document.querySelectorAll('.altered-btn-group-tab button');
@@ -296,4 +310,4 @@ $(function () {
 	// END PAGINATION
 });
 
-},{"./components/float-label":1,"./components/misc-jquery":2}]},{},[3]);
+},{"./components/float-label":1,"./components/misc-jquery":2,"./components/toggle-switch":3}]},{},[4]);

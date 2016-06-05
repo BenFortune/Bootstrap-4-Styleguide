@@ -18,15 +18,15 @@ import { gulpConfig } from './config';
 
 requireDir('./gulp', {recurse: true})
 
-gulp.task('stylesBuild', () => {
-	return gulp.src(gulpConfig.sassPaths.src)
-	.pipe(gScssLint(gulpConfig.scssLint))
-	.pipe(gSass())
-	.pipe(gAutoPrefixer(gulpConfig.autoPrefixConfig))
-	.pipe(gCssComb())
-	.pipe(gCssMinify())
-	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
-});
+// gulp.task('stylesBuild', () => {
+// 	return gulp.src(gulpConfig.sassPaths.src)
+// 	.pipe(gScssLint(gulpConfig.scssLint))
+// 	.pipe(gSass())
+// 	.pipe(gAutoPrefixer(gulpConfig.autoPrefixConfig))
+// 	.pipe(gCssComb())
+// 	.pipe(gCssMinify())
+// 	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
+// });
 
 gulp.task('scriptsLint', () => {
 	return gulp.src('./src/js/*.js')
@@ -35,7 +35,7 @@ gulp.task('scriptsLint', () => {
 	.pipe(gEsLint.failOnError());
 });
 
-gulp.task('browserify', () => s{
+gulp.task('browserify', () => {
 	return browserify('./src/js/main.js')
 	.transform(babelify, {presets: ['es2015']})
 	.bundle()
