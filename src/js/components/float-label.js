@@ -4,28 +4,24 @@ export default function floatLabel() {
 	const onClass = 'float-label-on';
 	const showClass = 'float-label';
 
-	for (let i = 0; i < floatInput.length; i++) {
-		floatInput[i].addEventListener('focus', (e) => {
-			floatLabelHandler.call(e.target, 'something else');
-		});
+	function floatLabelHandler(event) {
+		const that = event.target;
 
-		floatInput[i].addEventListener('blur', (e) => {
-			floatLabelHandler.call(e.target, 'something else');
-		});
-
-		floatInput[i].addEventListener('keyup', (e) => {
-			floatLabelHandler.call(e.target, 'something else');
-		});
+		if (!that.value || that.value === '') {
+			that.classList.remove(showClass);
+			that.previousElementSibling.classList.remove(onClass);
+		} else {
+			that.classList.add(showClass);
+			that.previousElementSibling.classList.add(onClass);
+		}
 	}
 
-	function floatLabelHandler() {
-		if (!this.value || this.value === '') {
-			this.classList.remove(showClass);
-			this.previousElementSibling.classList.remove(onClass);
-		} else {
-			this.classList.add(showClass);
-			this.previousElementSibling.classList.add(onClass);
-		}
+	for (let i = 0; i < floatInput.length; i++) {
+		floatInput[i].addEventListener('focus', floatLabelHandler, false);
+
+		floatInput[i].addEventListener('blur', floatLabelHandler, false);
+
+		floatInput[i].addEventListener('keyup', floatLabelHandler, false);
 	}
 	// END Float Label
 }

@@ -1,12 +1,12 @@
-export default function floatLabel() {
+export default function toggleSwitch() {
 	// BEGIN Toggle Switch
 	const alteredToggle = document.querySelector('.altered-toggle-control');
 	const alteredToggleLabel = document.querySelector('.altered-toggle-label');
-
 	alteredToggle.classList.add('on');
 
-	alteredToggle.addEventListener('click', (e) => {
-		const that = e.target;
+	function toggleTheSwitch(event) {
+		const that = event.target;
+
 		if(that.parentNode.className === 'altered-toggle-control on') {
 			that.parentNode.classList.remove('on');
 			that.parentNode.classList.add('off');
@@ -16,6 +16,8 @@ export default function floatLabel() {
 			that.parentNode.classList.add('on');
 			alteredToggleLabel.textContent = 'On';
 		}
-	});
+	}
+
+	alteredToggle.addEventListener('click', toggleTheSwitch, false);
 	// END Toggle Switch
 }
