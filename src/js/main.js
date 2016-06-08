@@ -1,36 +1,14 @@
 import miscJquery from './components/misc-jquery';
 import floatLabel from './components/float-label';
 import toggleSwitch from './components/toggle-switch';
+import formButtons from './components/form-buttons';
 
 $(() => {
 
 	miscJquery();
 	floatLabel();
 	toggleSwitch();
-
-
-	// Form Group Button Change
-	const channelBtn = document.querySelectorAll('.altered-btn-group-tab button');
-
-	for (let i = 0; i < channelBtn.length; i++) {
-		channelBtn[i].addEventListener('click', (e) => {
-			e.preventDefault();
-			const that = e.target;
-			if (that.className === 'btn inactive') {
-				resetButtonClass();
-				that.classList.remove('inactive');
-				that.classList.add('active');
-			}
-		});
-	}
-
-	function resetButtonClass() {
-		for (let i = 0; i < channelBtn.length; i++) {
-			channelBtn[i].classList.remove('active');
-			channelBtn[i].classList.add('inactive');
-		}
-	}
-	// End Form Group Button Change
+	formButtons();
 
 	// Select DD & Multi-select DD
 	const ddTrigger = $('.altered-select button');
