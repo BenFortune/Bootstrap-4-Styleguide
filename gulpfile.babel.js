@@ -18,21 +18,13 @@ import { gulpConfig } from './config';
 
 requireDir('./gulp', {recurse: true})
 
-// gulp.task('stylesBuild', () => {
-// 	return gulp.src(gulpConfig.sassPaths.src)
-// 	.pipe(gScssLint(gulpConfig.scssLint))
-// 	.pipe(gSass())
-// 	.pipe(gAutoPrefixer(gulpConfig.autoPrefixConfig))
-// 	.pipe(gCssComb())
-// 	.pipe(gCssMinify())
-// 	.pipe(gulp.dest(gulpConfig.sassPaths.dest));
-// });
-
 gulp.task('scriptsLint', () => {
 	return gulp.src('./src/js/*.js')
-	.pipe(gEsLint())
+	.pipe(gEsLint({
+		fix: true
+	}))
 	.pipe(gEsLint.format())
-	.pipe(gEsLint.failOnError());
+	.pipe(gulp.dest('./src/js'));
 });
 
 gulp.task('browserify', () => {
