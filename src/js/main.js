@@ -2,6 +2,7 @@ import miscJquery from './components/misc-jquery';
 import floatLabel from './components/float-label';
 import toggleSwitch from './components/toggle-switch';
 import formButtons from './components/form-buttons';
+import pagination from './components/pagination';
 
 $(() => {
 
@@ -9,6 +10,7 @@ $(() => {
 	floatLabel();
 	toggleSwitch();
 	formButtons();
+	pagination();
 
 	// Select DD & Multi-select DD
 	const ddTrigger = $('.altered-select button');
@@ -75,6 +77,7 @@ $(() => {
 		if ($(this).hasClass('add')) {
 			return;
 		} else {
+			console.log('remove the pill work and parent is', srcEl.parent());
 			srcEl.parent().addClass('remove');
 			addNewTag($(this).parent());
 		}
@@ -111,6 +114,7 @@ $(() => {
 		}
 	}
 	// END ADDING NEW TAGS
+
 	// ALERTS CLOSE
 	const alertEls = document.querySelectorAll('.altered-alert');
 	const closeAlertEls = document.querySelectorAll('.altered-alert .close');
@@ -135,28 +139,4 @@ $(() => {
 		});
 	}
 	// END ALERTS CLOSE
-
-	// PAGINATION
-	const paginationLinks = document.querySelectorAll('.page-link');
-
-	for (let i = 0; i < paginationLinks.length; i++) {
-		paginationLinks[i].addEventListener('click', (e) => {
-			e.preventDefault();
-			const that = e.target;
-
-			if (that.parentNode.className === 'page-item active') {
-				return;
-			} else {
-				removeActiveClass();
-				that.parentNode.classList.add('active');
-			}
-		});
-	}
-
-	function removeActiveClass() {
-		for (let i = 0; i < paginationLinks.length; i++) {
-			paginationLinks[i].parentNode.classList.remove('active');
-		}
-	}
-	// END PAGINATION
 });
