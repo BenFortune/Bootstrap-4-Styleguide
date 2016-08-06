@@ -3,6 +3,8 @@ import floatLabel from './components/float-label';
 import toggleSwitch from './components/toggle-switch';
 import formButtons from './components/form-buttons';
 import pagination from './components/pagination';
+import alertsClose from './components/alerts';
+import tags from './components/tags';
 
 $(() => {
 
@@ -11,6 +13,8 @@ $(() => {
 	toggleSwitch();
 	formButtons();
 	pagination();
+	alertsClose();
+	tags();
 
 	// Select DD & Multi-select DD
 	const ddTrigger = $('.altered-select button');
@@ -70,73 +74,4 @@ $(() => {
 	}
 	// End Select DD & Multi-select DD
 
-	// REMOVE/HIDE TAGS
-	const pills = $('.altered-pill');
-	pills.on('click', (e) => {
-		const srcEl = $(e.target);
-		if ($(this).hasClass('add')) {
-			return;
-		} else {
-			console.log('remove the pill work and parent is', srcEl.parent());
-			srcEl.parent().addClass('remove');
-			addNewTag($(this).parent());
-		}
-	});
-	// ENDREMOVE/HIDE TAGS
-
-	// ADD TAGS
-	const addPills = $('.altered-pill.add');
-	const pillInputs = $('.altered-pill.add input');
-	addPills.on('click', (e) => {
-		const srcEl = $(e.target);
-		$(srcEl).find('.remove').removeClass('remove').focus();
-	});
-	pillInputs.on('blur', function() {
-		const value = $(this).val();
-		if (value) {
-			const parentEl = $(this).parent().parent();
-			$(this).parent().text(value).removeClass('add').append('<span>x</span>');
-			addNewTag(parentEl);
-		} else {
-			return;
-		}
-	});
-	// END ADD TAGS
-
-	// ADDING NEW TAGS
-	function addNewTag(pillInput) {
-		const targetEl = $(pillInput).children().last();
-		if ($(targetEl).hasClass('add')) {
-			return;
-		} else {
-			const addTagMarkup = '<div class="altered-pill add"><span>+</span>Add Tag <input class="remove" type="text" placeholder="Add Tag"></div>';
-			$(pillInput).append(addTagMarkup);
-		}
-	}
-	// END ADDING NEW TAGS
-
-	// ALERTS CLOSE
-	const alertEls = document.querySelectorAll('.altered-alert');
-	const closeAlertEls = document.querySelectorAll('.altered-alert .close');
-
-	for (let i = 0; i < alertEls.length; i++) {
-		alertEls[i].addEventListener('click', () => {
-			alertEls[i].classList.add('altered-show-block');
-		});
-	}
-
-	for (let i = 0; i < closeAlertEls.length; i++) {
-		closeAlertEls[i].addEventListener('click', (e) => {
-			const that = e.target;
-
-			if (that.className === 'altered-alert close altered-show-block') {
-				that.classList.remove('altered-show-block');
-				that.classList.add('altered-hide');
-			} else {
-				that.classList.remove('altered-hide');
-				that.classList.add('altered-show-block');
-			}
-		});
-	}
-	// END ALERTS CLOSE
 });
