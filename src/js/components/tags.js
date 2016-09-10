@@ -1,16 +1,37 @@
 export default function tags() {
 	// REMOVE/HIDE TAGS
-	const pills = $('.altered-pill');
-	pills.on('click', (e) => {
-		const srcEl = $(e.target);
-		if ($(this).hasClass('add')) {
-			return;
-		} else {
-			console.log('remove the pill work and parent is', srcEl.parent());
-			srcEl.parent().addClass('remove');
-			addNewTag($(this).parent());
+	// const pills = $('.altered-pill');
+	const pills = document.querySelectorAll('.altered-pill');
+
+	// pills.on('click', (e) => {
+	// 	const srcEl = $(e.target);
+	// 	if ($(this).hasClass('add')) {
+	// 		return;
+	// 	} else {
+	// 		console.log('remove the pill work and parent is', srcEl.parent());
+	// 		srcEl.parent().addClass('remove');
+	// 		addNewTag($(this).parent());
+	// 	}
+	// });
+	function setPillEvents() {
+		console.log('set pill events function called');
+		for (var i = 0; i < pills.length; i++) {
+			pills[i].addEventListener('click', removePill);
 		}
-	});
+	}
+
+	function removePill(e) {
+		console.log('remove pill function called');
+			const srcEl = e.target;
+			if (srcEl.classList.contains('add')) {
+				console.log('has add class');
+				return;
+			} else {
+				console.log('remove the pill work and parent is', srcEl.parent());
+				srcEl.parent().addClass('remove');
+				// addNewTag($(this).parent());
+			}
+	}
 	// ENDREMOVE/HIDE TAGS
 
 	// ADD TAGS
@@ -44,4 +65,6 @@ export default function tags() {
 	}
 	// END ADDING NEW TAGS
 
+	// INITIAL FUNCTION
+	setPillEvents();
 }
