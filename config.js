@@ -7,9 +7,9 @@ export const gulpConfig = {
 		src: './src/js/*.js',
 		dest: './build/js',
 		filePaths: [
-			'bower_components/jquery/dist/jquery.js',
-			'node_modules/tether/dist/js/tether.min.js',
-			'bootstrap-4.0.0-alpha/dist/js/bootstrap.min.js',
+			// 'bower_components/jquery/dist/jquery.js',
+			// 'node_modules/tether/dist/js/tether.min.js',
+			// 'bootstrap-4.0.0-alpha/dist/js/bootstrap.min.js',
 			'bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js',
 			'build/js/scripts-b.js'
 		]
