@@ -1,8 +1,8 @@
-#Bootstrap 4 Styleguide
+# Bootstrap 4 Styleguide
 
 ---
 
-####TO DO
+#### TO DO
 - Make fully responsive
 - Break main.js into modules
 - ES6-ify main.js
